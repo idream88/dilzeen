@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import DecorativeMotif from '../components/ui/DecorativeMotif.astro';
+import ClosingsGallery from '../components/sections/ClosingsGallery.astro';
+import { closingPhotos, closingsPage } from '../data/closings';
+import { stockImages } from '../data/images';
+import { formatTitle } from '../data/site';
+
+const page = closingsPage;
+const heroImage = stockImages.luxuryGardenExterior;
+---
+
+<BaseLayout title={formatTitle(page.seo.title)} description={page.seo.description}>
+	<!-- Hero -->
+	<section class="relative overflow-hidden">
+		<div class="absolute inset-0">
+			<img
+				src={heroImage.src}
+				alt=""
+				class="h-full w-full object-cover"
+				style={`object-position: ${heroImage.objectPosition}`}
+				aria-hidden="true"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-r from-brand-cream/95 via-brand-cream/85 to-brand-cream/50"></div>
+			<div class="absolute inset-0 bg-gradient-to-t from-brand-cream via-transparent to-brand-ivory/30"></div>
+		</div>
+
+		<DecorativeMotif variant="compass" class="right-8 top-16 h-40 w-40 opacity-40 sm:right-16 sm:h-56 sm:w-56" />
+		<DecorativeMotif variant="grid" class="bottom-20 right-1/3 h-20 w-20 opacity-50" />
+
+		<div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+			<div class="max-w-3xl">
+				<p class="type-eyebrow">{page.hero.eyebrow}</p>
+				<div class="accent-line mt-4"></div>
+				<h1 class="mt-6 text-4xl leading-[1.15] sm:text-5xl lg:text-[3.25rem]">
+					{page.hero.title}
+				</h1>
+				<p class="mt-4 max-w-2xl text-lg text-brand-charcoal/70">{page.hero.subtitle}</p>
+				<div class="mt-8 space-y-5 text-lg leading-relaxed text-brand-charcoal/75">
+					{page.hero.intro.map((paragraph) => <p>{paragraph}</p>)}
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="pointer-events-none absolute -bottom-px left-0 right-0 h-12 bg-gradient-to-b from-transparent to-brand-cream"
+			aria-hidden="true"
+		></div>
+	</section>
+
+	<!-- Gallery -->
+	<section class="section-flow relative overflow-hidden py-16 sm:py-20">
+		<div class="absolute inset-0 bg-gradient-to-b from-brand-cream via-brand-ivory/50 to-brand-warm" aria-hidden="true"></div>
+		<DecorativeMotif variant="circles" class="right-8 top-12 h-32 w-32 opacity-30" />
+
+		<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="mx-auto max-w-3xl text-center">
+				<h2 class="sr-only">Past closing gallery</h2>
+				<p class="text-balance text-lg leading-relaxed text-brand-charcoal/75">
+					{page.galleryIntro}
+				</p>
+				<div class="accent-line-center mt-8"></div>
+			</div>
+
+			<div class="mt-14">
+				<ClosingsGallery photos={closingPhotos} />
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="relative overflow-hidden py-20 sm:py-28">
+		<div class="absolute inset-0 bg-gradient-to-br from-brand-red via-brand-red to-brand-red-dark" aria-hidden="true"></div>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.12),transparent_60%)]"
+			aria-hidden="true"
+		></div>
+		<DecorativeMotif variant="circles" class="left-1/4 top-1/2 h-48 w-48 -translate-y-1/2 text-brand-white/10" />
+
+		<div class="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+			<div class="accent-line-center mb-6 !via-brand-white/40"></div>
+			<h2 class="type-section-title text-brand-cream">{page.cta.title}</h2>
+			<p class="type-body mx-auto mt-5 max-w-xl !text-brand-cream/90">{page.cta.body}</p>
+			<div class="mt-10">
+				<Button
+					href={page.cta.button.href}
+					variant="secondary"
+					class="!border-brand-cream/40 !bg-brand-cream !text-brand-red hover:!border-brand-cream hover:!bg-brand-white"
+				>
+					{page.cta.button.text}
+				</Button>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

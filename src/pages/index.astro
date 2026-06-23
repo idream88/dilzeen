@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import Intro from '../components/sections/Intro.astro';
+import ServicesGrid from '../components/sections/ServicesGrid.astro';
+import VastuHighlight from '../components/sections/VastuHighlight.astro';
+import WhyChoose from '../components/sections/WhyChoose.astro';
+import ReviewsPreview from '../components/sections/ReviewsPreview.astro';
+import CTABanner from '../components/sections/CTABanner.astro';
+import { site, formatTitle, fullStreetAddress } from '../data/site';
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'RealEstateAgent',
+	name: site.name,
+	description: site.defaultDescription,
+	url: site.url,
+	telephone: site.phone,
+	email: site.email,
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: fullStreetAddress(),
+		addressLocality: site.address.city,
+		addressRegion: site.address.state,
+		postalCode: site.address.zip,
+		addressCountry: 'US',
+	},
+	areaServed: site.areaServed,
+	memberOf: {
+		'@type': 'Organization',
+		name: site.affiliation,
+	},
+};
+---
+
+<BaseLayout
+	title={formatTitle('DFW Realtor')}
+	description={site.defaultDescription}
+	jsonLd={jsonLd}
+>
+	<Hero />
+	<Intro />
+	<ServicesGrid />
+	<VastuHighlight />
+	<WhyChoose />
+	<ReviewsPreview />
+	<CTABanner />
+</BaseLayout>

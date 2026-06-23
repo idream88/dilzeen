@@ -1,0 +1,36 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import FeatureCard from '../ui/FeatureCard.astro';
+import DecorativeMotif from '../ui/DecorativeMotif.astro';
+import { whyChoose } from '../../data/placeholders';
+---
+
+<section class="section-flow relative overflow-hidden py-20 sm:py-28">
+	<!-- Layered background -->
+	<div class="absolute inset-0 bg-gradient-to-b from-brand-cream via-brand-warm to-brand-ivory" aria-hidden="true"></div>
+	<div
+		class="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-brand-rose/15 blur-3xl"
+		aria-hidden="true"
+	></div>
+	<DecorativeMotif variant="circles" class="right-12 top-20 h-40 w-40 opacity-50" />
+
+	<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+		<SectionHeading
+			eyebrow="Why Choose Dilzeen"
+			title="Trusted Guidance, Personal Attention"
+			subtitle="A realtor who combines market expertise with genuine care for your goals."
+		/>
+		<div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+			{
+				whyChoose.map((item, index) => (
+					<FeatureCard
+						title={item.title}
+						description={item.description}
+						icon={item.icon}
+						index={index}
+					/>
+				))
+			}
+		</div>
+	</div>
+</section>

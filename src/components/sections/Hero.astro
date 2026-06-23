@@ -1,0 +1,106 @@
+---
+import Button from '../ui/Button.astro';
+import DecorativeMotif from '../ui/DecorativeMotif.astro';
+import { site } from '../../data/site';
+import { stockImages } from '../../data/images';
+
+const heroImage = stockImages.coupleDreamHome;
+const accentImage = stockImages.modernKitchen;
+---
+
+<section class="relative overflow-hidden">
+	<!-- Background image with warm treatment -->
+	<div class="absolute inset-0">
+		<img
+			src={heroImage.src}
+			alt=""
+			class="h-full w-full object-cover"
+			style={`object-position: ${heroImage.objectPosition}`}
+			aria-hidden="true"
+		/>
+		<div class="absolute inset-0 bg-gradient-to-r from-brand-cream/95 via-brand-cream/80 to-brand-cream/40"></div>
+		<div class="absolute inset-0 bg-gradient-to-t from-brand-cream via-transparent to-brand-ivory/30"></div>
+	</div>
+
+	<!-- Decorative motifs -->
+	<DecorativeMotif variant="compass" class="right-8 top-16 h-48 w-48 sm:right-16 sm:top-20 sm:h-64 sm:w-64" />
+	<DecorativeMotif variant="grid" class="bottom-24 right-1/4 h-24 w-24 opacity-60" />
+	<DecorativeMotif variant="circles" class="left-1/2 top-1/3 h-32 w-32 -translate-x-1/2" />
+
+	<!-- Soft glow accent -->
+	<div
+		class="pointer-events-none absolute -right-20 top-1/4 h-80 w-80 rounded-full bg-brand-rose/20 blur-3xl"
+		aria-hidden="true"
+	></div>
+
+	<div class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32">
+		<div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+			<!-- Cream content panel -->
+			<div
+				class="relative lg:col-span-7 lg:-mr-8 lg:z-10"
+			>
+				<div
+					class="relative rounded-2xl border border-brand-taupe/40 bg-brand-cream/90 p-8 shadow-[0_8px_40px_-12px_rgba(44,36,32,0.12)] backdrop-blur-sm sm:rounded-3xl sm:p-10 lg:p-12"
+				>
+					<!-- Corner flourish -->
+					<div class="absolute left-6 top-6 h-8 w-8 border-l-2 border-t-2 border-brand-red/30" aria-hidden="true"></div>
+					<div class="absolute bottom-6 right-6 h-8 w-8 border-b-2 border-r-2 border-brand-red/30" aria-hidden="true"></div>
+
+					<p class="type-eyebrow !text-brand-charcoal/80">
+						Real Estate <span class="text-brand-red/60">•</span> Relocation <span class="text-brand-red/60">•</span> Home Harmony
+					</p>
+					<div class="accent-line mt-4"></div>
+
+					<h1 class="type-hero mt-6">
+						Find a Home That Feels Right — Inside and Out
+					</h1>
+
+					<p class="type-body mt-6 max-w-xl">
+						{site.name} helps buyers, sellers, and relocating families across the Dallas-Fort Worth area — with
+						a thoughtful Vastu &amp; Feng Shui perspective on home search.
+					</p>
+
+					<p class="type-caption mt-3">{site.affiliation}</p>
+
+					<div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+						<Button href="/contact">Schedule a Consultation</Button>
+						<Button href="/vastu-feng-shui-home-search" variant="secondary">
+							Explore Vastu &amp; Feng Shui Search
+						</Button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Right visual accent area -->
+			<div class="relative hidden lg:col-span-5 lg:block">
+				<div class="relative ml-4 translate-y-6">
+					<div
+						class="relative aspect-[4/5] overflow-hidden rounded-2xl border border-brand-taupe/30 shadow-[0_20px_50px_-15px_rgba(44,36,32,0.15)]"
+					>
+						<img
+							src={accentImage.src}
+							alt={accentImage.alt}
+							class="h-full w-full object-cover"
+							style={`object-position: ${accentImage.objectPosition}`}
+						/>
+						<div class="absolute inset-0 bg-gradient-to-t from-brand-espresso/20 to-transparent"></div>
+					</div>
+					<!-- Overlapping accent card -->
+					<div
+						class="absolute -bottom-6 -left-8 max-w-[14rem] rounded-xl border border-brand-beige bg-brand-ivory/95 p-5 shadow-lg backdrop-blur-sm"
+					>
+						<p class="font-serif text-xl leading-snug text-brand-espresso">Dallas-Fort Worth</p>
+						<p class="type-caption mt-1">DFW expertise, personal guidance</p>
+						<div class="mt-3 h-px w-8 bg-brand-red/50"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Gentle section transition -->
+	<div
+		class="pointer-events-none absolute -bottom-px left-0 right-0 h-16 bg-gradient-to-b from-transparent to-brand-cream"
+		aria-hidden="true"
+	></div>
+</section>

@@ -1,0 +1,471 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import DecorativeMotif from '../components/ui/DecorativeMotif.astro';
+import { vastuPage } from '../data/vastu';
+import { stockImages } from '../data/images';
+import { formatTitle } from '../data/site';
+
+const page = vastuPage;
+const heroBg = stockImages.modernKitchen;
+const heroFeature = stockImages.stylishInterior;
+const introImage = stockImages.elegantDining;
+const lifestyleImage = stockImages.spaBathroom;
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: page.faq.items.map((item) => ({
+		'@type': 'Question',
+		name: item.question,
+		acceptedAnswer: {
+			'@type': 'Answer',
+			text: item.answer,
+		},
+	})),
+};
+---
+
+<BaseLayout
+	title={formatTitle(page.seo.title)}
+	description={page.seo.description}
+	jsonLd={jsonLd}
+>
+	<!-- 1. Hero -->
+	<section class="relative overflow-hidden">
+		<div class="absolute inset-0">
+			<img
+				src={heroBg.src}
+				alt=""
+				class="h-full w-full object-cover"
+				style={`object-position: ${heroBg.objectPosition}`}
+				aria-hidden="true"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-r from-brand-cream/95 via-brand-cream/88 to-brand-cream/55"></div>
+			<div class="absolute inset-0 bg-gradient-to-t from-brand-cream via-transparent to-brand-ivory/30"></div>
+		</div>
+
+		<DecorativeMotif variant="compass" class="right-8 top-16 h-40 w-40 opacity-40 sm:right-16 sm:h-56 sm:w-56" />
+		<DecorativeMotif variant="grid" class="bottom-20 left-8 h-20 w-20 opacity-40" />
+
+		<div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+			<div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+				<div class="lg:col-span-7">
+					<p class="type-eyebrow">{page.hero.eyebrow}</p>
+					<div class="accent-line mt-4"></div>
+					<h1 class="mt-6 text-4xl leading-[1.15] sm:text-5xl lg:text-[3.25rem]">
+						{page.hero.h1}
+					</h1>
+					<p class="mt-6 max-w-2xl text-lg leading-relaxed text-brand-charcoal/75">
+						{page.hero.subheadline}
+					</p>
+					<div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+						<Button href={page.hero.primaryCta.href}>{page.hero.primaryCta.text}</Button>
+						<Button href={page.hero.secondaryCta.href} variant="secondary">
+							{page.hero.secondaryCta.text}
+						</Button>
+					</div>
+				</div>
+
+				<div class="relative lg:col-span-5">
+					<div
+						class="absolute -right-3 -top-3 h-full w-full rounded-2xl border border-brand-taupe/40"
+						aria-hidden="true"
+					></div>
+					<div class="relative overflow-hidden rounded-2xl border border-brand-taupe/50 shadow-[0_8px_32px_-8px_rgba(44,36,32,0.12)]">
+						<img
+							src={heroFeature.src}
+							alt={heroFeature.alt}
+							class="aspect-[4/3] w-full object-cover"
+							style={`object-position: ${heroFeature.objectPosition}`}
+							loading="eager"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="pointer-events-none absolute -bottom-px left-0 right-0 h-12 bg-gradient-to-b from-transparent to-brand-cream"
+			aria-hidden="true"
+		></div>
+	</section>
+
+	<!-- 2. Intro: More Than a Home Search -->
+	<section class="py-16 sm:py-20">
+		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+				<div class="lg:col-span-7">
+					<h2 class="text-3xl leading-tight sm:text-4xl">{page.intro.h2}</h2>
+					<div class="accent-line mt-5"></div>
+					<div class="mt-8 space-y-5 leading-relaxed text-brand-charcoal/75">
+						{page.intro.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+					</div>
+				</div>
+				<div class="lg:col-span-5">
+					<div class="relative">
+						<div
+							class="absolute -right-2 -top-2 h-full w-full rounded-2xl border border-brand-taupe/30"
+							aria-hidden="true"
+						></div>
+						<div class="relative overflow-hidden rounded-2xl border border-brand-taupe/50 shadow-[0_8px_32px_-8px_rgba(44,36,32,0.1)]">
+							<img
+								src={introImage.src}
+								alt={introImage.alt}
+								class="aspect-[4/3] w-full object-cover"
+								style={`object-position: ${introImage.objectPosition}`}
+								loading="lazy"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-brand-espresso/10 to-transparent"
+								aria-hidden="true"
+							></div>
+						</div>
+					</div>
+					<div class="rounded-2xl border border-brand-taupe/50 bg-brand-ivory/60 p-8 shadow-[0_4px_24px_-8px_rgba(44,36,32,0.06)] mt-8">
+						<p class="type-eyebrow !text-brand-charcoal/60">Questions to Consider</p>
+						<ul class="mt-6 space-y-4">
+							{
+								page.intro.points.map((point) => (
+									<li class="flex gap-3 text-sm leading-relaxed text-brand-charcoal/75">
+										<svg
+											class="mt-0.5 h-5 w-5 shrink-0 text-brand-red"
+											viewBox="0 0 20 20"
+											fill="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+										{point}
+									</li>
+								))
+							}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 3. What Dilzeen Evaluates -->
+	<section class="section-flow relative overflow-hidden py-16 sm:py-20">
+		<div class="absolute inset-0 bg-gradient-to-b from-brand-ivory via-brand-warm to-brand-cream" aria-hidden="true"></div>
+		<DecorativeMotif variant="grid" class="right-8 top-12 h-32 w-32 opacity-40" />
+
+		<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<SectionHeading title={page.evaluations.h2} subtitle={page.evaluations.subtitle} align="left" />
+			<div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+				{
+					page.evaluations.cards.map((card) => (
+						<article class="card-lift rounded-2xl border border-brand-taupe/50 bg-brand-ivory/80 p-6 shadow-[0_4px_24px_-8px_rgba(44,36,32,0.08)]">
+							<h3 class="text-lg leading-snug">{card.title}</h3>
+							<div class="mt-3 h-px w-8 bg-brand-red/40"></div>
+							<p class="mt-4 text-sm leading-relaxed text-brand-charcoal/70">{card.description}</p>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- 4. The Compass & Layout Lens -->
+	<section class="py-16 sm:py-20">
+		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+				<div>
+					<h2 class="text-3xl leading-tight sm:text-4xl">{page.compass.h2}</h2>
+					<div class="accent-line mt-5"></div>
+					<div class="mt-8 space-y-5 leading-relaxed text-brand-charcoal/75">
+						{page.compass.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+					</div>
+				</div>
+				<div class="relative">
+					<div
+						class="absolute -left-3 -bottom-3 h-full w-full rounded-2xl border border-brand-taupe/30"
+						aria-hidden="true"
+					></div>
+					<div class="relative overflow-hidden rounded-2xl border border-brand-taupe/50 bg-brand-ivory shadow-[0_8px_32px_-8px_rgba(44,36,32,0.1)]">
+						<img
+							src={page.compass.image.src}
+							alt={page.compass.image.alt}
+							class="w-full"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 5. Balancing the Five Elements -->
+	<section class="relative overflow-hidden py-16 sm:py-20">
+		<div class="absolute inset-0 bg-brand-warm" aria-hidden="true"></div>
+		<DecorativeMotif variant="circles" class="left-0 top-1/2 h-48 w-48 -translate-y-1/2 opacity-30" />
+
+		<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+				<div class="order-2 lg:order-1">
+					<div class="relative">
+						<div
+							class="absolute -right-3 -top-3 h-full w-full rounded-2xl border border-brand-taupe/30"
+							aria-hidden="true"
+						></div>
+						<div class="relative overflow-hidden rounded-2xl border border-brand-taupe/50 bg-brand-ivory shadow-[0_8px_32px_-8px_rgba(44,36,32,0.1)]">
+							<img
+								src={page.elements.image.src}
+								alt={page.elements.image.alt}
+								class="w-full"
+								loading="lazy"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="order-1 lg:order-2">
+					<h2 class="text-3xl leading-tight sm:text-4xl">{page.elements.h2}</h2>
+					<div class="accent-line mt-5"></div>
+					<div class="mt-8 space-y-5 leading-relaxed text-brand-charcoal/75">
+						{page.elements.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+					</div>
+					<div class="mt-8 flex flex-wrap gap-2">
+						{
+							page.elements.applications.map((item) => (
+								<span class="rounded-full border border-brand-taupe/60 bg-brand-ivory/80 px-4 py-1.5 text-xs font-medium text-brand-charcoal/70">
+									{item}
+								</span>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 6. For Buyers -->
+	<section class="py-16 sm:py-20">
+		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+				<div>
+					<h2 class="text-3xl leading-tight sm:text-4xl">{page.buyers.h2}</h2>
+					<div class="accent-line mt-5"></div>
+					<p class="mt-6 leading-relaxed text-brand-charcoal/75">{page.buyers.intro}</p>
+					<div class="relative mt-10 hidden sm:block lg:hidden">
+						<img
+							src={lifestyleImage.src}
+							alt={lifestyleImage.alt}
+							class="aspect-[16/10] w-full rounded-2xl border border-brand-taupe/50 object-cover shadow-[0_8px_32px_-8px_rgba(44,36,32,0.1)]"
+							style={`object-position: ${lifestyleImage.objectPosition}`}
+							loading="lazy"
+						/>
+					</div>
+				</div>
+				<div>
+					<div class="relative mb-8 hidden lg:block">
+						<img
+							src={lifestyleImage.src}
+							alt={lifestyleImage.alt}
+							class="aspect-[4/3] w-full rounded-2xl border border-brand-taupe/50 object-cover shadow-[0_8px_32px_-8px_rgba(44,36,32,0.1)]"
+							style={`object-position: ${lifestyleImage.objectPosition}`}
+							loading="lazy"
+						/>
+					</div>
+					<ul class="space-y-4">
+						{
+							page.buyers.items.map((item) => (
+								<li class="flex gap-3 rounded-xl border border-brand-taupe/40 bg-brand-ivory/50 px-5 py-4 leading-relaxed text-brand-charcoal/75">
+									<svg
+										class="mt-1 h-5 w-5 shrink-0 text-brand-red"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+									{item}
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 7. For Sellers -->
+	<section class="relative overflow-hidden py-16 sm:py-20">
+		<div class="absolute inset-0 bg-gradient-to-br from-brand-ivory via-brand-warm to-brand-cream" aria-hidden="true"></div>
+
+		<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="mx-auto max-w-3xl text-center">
+				<h2 class="text-3xl leading-tight sm:text-4xl">{page.sellers.h2}</h2>
+				<div class="accent-line-center mt-5"></div>
+				<div class="mt-8 space-y-5 leading-relaxed text-brand-charcoal/75">
+					{page.sellers.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+				</div>
+			</div>
+			<div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+				{
+					page.sellers.items.map((item) => (
+						<div class="rounded-xl border border-brand-taupe/40 bg-brand-ivory/70 px-6 py-5 text-center text-sm leading-relaxed text-brand-charcoal/75">
+							{item}
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- 8. For Builders & Floor Plan Review -->
+	<section class="py-16 sm:py-20">
+		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="rounded-2xl border border-brand-taupe/50 bg-brand-ivory/60 p-8 sm:p-12 lg:flex lg:items-center lg:justify-between lg:gap-12">
+				<div class="max-w-2xl">
+					<h2 class="text-3xl leading-tight sm:text-4xl">{page.buildersBridge.h2}</h2>
+					<div class="accent-line mt-5"></div>
+					<div class="mt-6 space-y-4 leading-relaxed text-brand-charcoal/75">
+						{page.buildersBridge.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+					</div>
+				</div>
+				<div class="mt-8 shrink-0 lg:mt-0">
+					<Button href={page.buildersBridge.cta.href}>{page.buildersBridge.cta.text}</Button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 9. Personalized Guidance -->
+	<section class="relative overflow-hidden py-16 sm:py-20">
+		<div class="absolute inset-0 bg-brand-espresso" aria-hidden="true"></div>
+		<div
+			class="absolute inset-0 bg-gradient-to-br from-brand-espresso via-brand-charcoal to-brand-espresso"
+			aria-hidden="true"
+		></div>
+		<DecorativeMotif variant="compass" class="right-8 top-12 h-40 w-40 text-brand-white/[0.04]" />
+
+		<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+				<div class="lg:col-span-5">
+					<div class="relative mx-auto max-w-xs lg:mx-0">
+						<div
+							class="absolute -right-3 -top-3 h-full w-full rounded-2xl border border-brand-cream/10"
+							aria-hidden="true"
+						></div>
+						<img
+							src="/images/dilzeen-headshot.png"
+							alt="Dilzeen Engineer, Vastu and Feng Shui realtor serving the Dallas-Fort Worth area"
+							class="relative rounded-2xl border border-brand-cream/15 shadow-2xl"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+				<div class="lg:col-span-7">
+					<p class="type-eyebrow !text-brand-rose">Blueprints of Balance</p>
+					<h2 class="mt-4 text-3xl leading-tight text-brand-cream sm:text-4xl">
+						{page.personalized.h2}
+					</h2>
+					<div class="mt-5 h-px w-12 bg-brand-red/60"></div>
+					<div class="mt-8 space-y-5 leading-relaxed [&_p]:text-brand-cream/85">
+						{page.personalized.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 10. What the Process Looks Like -->
+	<section class="relative overflow-hidden py-16 sm:py-20">
+		<div class="absolute inset-0 bg-brand-warm" aria-hidden="true"></div>
+		<DecorativeMotif variant="compass" class="left-0 top-1/2 h-48 w-48 -translate-y-1/2 opacity-30" />
+
+		<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<SectionHeading title={page.process.h2} />
+			<ol class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+				{
+					page.process.steps.map((step, i) => (
+						<li>
+							<span
+								class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-red text-sm font-semibold text-brand-white"
+								aria-hidden="true"
+							>
+								{i + 1}
+							</span>
+							<h3 class="mt-5 text-lg font-semibold leading-snug">{step.title}</h3>
+							<p class="mt-3 text-sm leading-relaxed text-brand-charcoal/70">{step.description}</p>
+						</li>
+					))
+				}
+			</ol>
+		</div>
+	</section>
+
+	<!-- 11. FAQ -->
+	<section class="py-16 sm:py-20">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+			<SectionHeading title={page.faq.h2} />
+			<div class="mt-12 divide-y divide-brand-taupe/40 border-y border-brand-taupe/40">
+				{
+					page.faq.items.map((item) => (
+						<details class="group py-6">
+							<summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-semibold text-brand-espresso marker:content-none">
+								<span>{item.question}</span>
+								<svg
+									class="h-5 w-5 shrink-0 text-brand-red transition-transform duration-300 group-open:rotate-180"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</summary>
+							<p class="mt-4 leading-relaxed text-brand-charcoal/70">{item.answer}</p>
+						</details>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- 12. Final CTA -->
+	<section class="relative overflow-hidden py-20 sm:py-28">
+		<div class="absolute inset-0 bg-gradient-to-br from-brand-red via-brand-red to-brand-red-dark" aria-hidden="true"></div>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.12),transparent_60%)]"
+			aria-hidden="true"
+		></div>
+		<DecorativeMotif variant="circles" class="left-1/4 top-1/2 h-48 w-48 -translate-y-1/2 text-brand-white/10" />
+
+		<div class="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+			<div class="accent-line-center mb-6 !via-brand-white/40"></div>
+			<h2 class="text-3xl leading-tight text-brand-cream sm:text-4xl">{page.cta.h2}</h2>
+			<p class="mx-auto mt-5 max-w-xl leading-relaxed text-brand-cream/85">{page.cta.body}</p>
+			<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+				<Button
+					href={page.cta.primaryCta.href}
+					variant="secondary"
+					class="!border-brand-cream/40 !bg-brand-cream !text-brand-red hover:!border-brand-cream hover:!bg-brand-white"
+				>
+					{page.cta.primaryCta.text}
+				</Button>
+				<Button
+					href={page.cta.secondaryCta.href}
+					variant="secondary"
+					class="!border-brand-cream/30 !bg-transparent !text-brand-cream hover:!bg-brand-cream/10"
+				>
+					{page.cta.secondaryCta.text}
+				</Button>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import ServiceCard from '../ui/ServiceCard.astro';
+import { services } from '../../data/placeholders';
+---
+
+<section class="relative py-20 sm:py-28">
+	<div class="absolute inset-0 bg-brand-cream" aria-hidden="true"></div>
+	<div
+		class="absolute left-1/2 top-0 h-px w-2/3 max-w-3xl -translate-x-1/2 bg-gradient-to-r from-transparent via-brand-taupe/60 to-transparent"
+		aria-hidden="true"
+	></div>
+
+	<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+		<SectionHeading
+			eyebrow="Services"
+			title="How I Can Help"
+			subtitle="Comprehensive real estate services for every stage of your journey."
+		/>
+		<div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+			{services.map((service) => (
+				<ServiceCard
+					title={service.title}
+					description={service.description}
+					href={service.href}
+				/>
+			))}
+		</div>
+	</div>
+</section>

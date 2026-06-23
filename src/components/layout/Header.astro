@@ -1,0 +1,221 @@
+---
+import { nav, contactHref, isActive } from '../../data/navigation';
+import NavDropdown from './NavDropdown.astro';
+import BrandLogo from '../ui/BrandLogo.astro';
+
+const pathname = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 border-b border-brand-taupe/30 bg-brand-cream/90 backdrop-blur-md">
+	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:px-8">
+		<a href="/" class="inline-flex shrink-0 items-center transition-opacity hover:opacity-90">
+			<BrandLogo variant="header" class="hidden sm:block" />
+			<BrandLogo variant="mobile" class="sm:hidden" />
+		</a>
+
+		<!-- Desktop nav -->
+		<nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+			<ul class="flex items-center">
+				{
+					nav.map((item) =>
+						item.children ? (
+							<NavDropdown item={item} pathname={pathname} />
+						) : (
+							<li>
+								<a
+									href={item.href}
+									class:list={[
+										'px-3 py-2 text-sm font-medium transition-colors',
+										isActive(pathname, item.href!)
+											? 'text-brand-red'
+											: 'text-brand-black hover:text-brand-red',
+									]}
+								>
+									{item.label}
+								</a>
+							</li>
+						),
+					)
+				}
+			</ul>
+			<a
+				href={contactHref}
+				class="ml-4 rounded-full bg-brand-red px-5 py-2.5 text-sm font-semibold text-brand-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-red-dark hover:shadow-md"
+			>
+				Contact
+			</a>
+		</nav>
+
+		<!-- Mobile toggle -->
+		<button
+			type="button"
+			id="mobile-menu-toggle"
+			class="inline-flex items-center justify-center rounded-md p-2 text-brand-black hover:text-brand-red lg:hidden"
+			aria-expanded="false"
+			aria-controls="mobile-menu"
+			aria-label="Open menu"
+		>
+			<svg id="icon-menu" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+			<svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+			</svg>
+		</button>
+	</div>
+
+	<!-- Mobile menu -->
+	<div
+		id="mobile-menu-backdrop"
+		class="fixed inset-0 z-40 hidden bg-brand-black/40 lg:hidden"
+		aria-hidden="true"
+	></div>
+
+	<div
+		id="mobile-menu"
+		class="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm translate-x-full flex-col bg-brand-white shadow-xl transition-transform duration-300 lg:hidden"
+		aria-hidden="true"
+	>
+		<div class="flex items-center justify-between border-b border-brand-black/10 px-4 py-3">
+			<a href="/" class="inline-flex items-center transition-opacity hover:opacity-90">
+				<BrandLogo variant="mobile" />
+			</a>
+			<button
+				type="button"
+				id="mobile-menu-close"
+				class="rounded-md p-2 text-brand-black hover:text-brand-red"
+				aria-label="Close menu"
+			>
+				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</button>
+		</div>
+
+		<nav class="flex-1 overflow-y-auto px-4 py-6" aria-label="Mobile navigation">
+			<ul class="space-y-1">
+				{
+					nav.map((item) =>
+						item.children ? (
+							<li>
+								<details class="group">
+									<summary class="flex cursor-pointer list-none items-center justify-between rounded-md px-3 py-2.5 text-base font-medium text-brand-black hover:bg-brand-warm [&::-webkit-details-marker]:hidden">
+										{item.label}
+										<svg
+											class="h-4 w-4 transition-transform group-open:rotate-180"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M19 9l-7 7-7-7"
+											/>
+										</svg>
+									</summary>
+									<ul class="ml-3 mt-1 space-y-1 border-l border-brand-black/10 pl-3">
+										{item.children.map((child) => (
+											<li>
+												<a
+													href={child.href}
+													class:list={[
+														'block rounded-md px-3 py-2 text-sm transition-colors',
+														isActive(pathname, child.href)
+															? 'text-brand-red'
+															: 'text-brand-black/80 hover:text-brand-red',
+													]}
+												>
+													{child.label}
+												</a>
+											</li>
+										))}
+									</ul>
+								</details>
+							</li>
+						) : (
+							<li>
+								<a
+									href={item.href}
+									class:list={[
+										'block rounded-md px-3 py-2.5 text-base font-medium transition-colors',
+										isActive(pathname, item.href!)
+											? 'text-brand-red'
+											: 'text-brand-black hover:bg-brand-warm hover:text-brand-red',
+									]}
+								>
+									{item.label}
+								</a>
+							</li>
+						),
+					)
+				}
+			</ul>
+		</nav>
+
+		<div class="border-t border-brand-black/10 p-4">
+			<a
+				href={contactHref}
+				class="block w-full rounded-full bg-brand-red px-5 py-3 text-center text-sm font-semibold text-brand-white shadow-sm transition-all duration-300 hover:bg-brand-red-dark"
+			>
+				Contact
+			</a>
+		</div>
+	</div>
+</header>
+
+<script>
+	function initMobileMenu() {
+		const toggle = document.getElementById('mobile-menu-toggle');
+		const closeBtn = document.getElementById('mobile-menu-close');
+		const menu = document.getElementById('mobile-menu');
+		const backdrop = document.getElementById('mobile-menu-backdrop');
+		const iconMenu = document.getElementById('icon-menu');
+		const iconClose = document.getElementById('icon-close');
+
+		if (!toggle || !menu || !backdrop) return;
+
+		function openMenu() {
+			menu!.classList.remove('translate-x-full');
+			menu!.setAttribute('aria-hidden', 'false');
+			backdrop!.classList.remove('hidden');
+			toggle!.setAttribute('aria-expanded', 'true');
+			toggle!.setAttribute('aria-label', 'Close menu');
+			iconMenu?.classList.add('hidden');
+			iconClose?.classList.remove('hidden');
+			document.body.classList.add('overflow-hidden');
+		}
+
+		function closeMenu() {
+			menu!.classList.add('translate-x-full');
+			menu!.setAttribute('aria-hidden', 'true');
+			backdrop!.classList.add('hidden');
+			toggle!.setAttribute('aria-expanded', 'false');
+			toggle!.setAttribute('aria-label', 'Open menu');
+			iconMenu?.classList.remove('hidden');
+			iconClose?.classList.add('hidden');
+			document.body.classList.remove('overflow-hidden');
+		}
+
+		toggle.addEventListener('click', () => {
+			const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+			if (isOpen) closeMenu();
+			else openMenu();
+		});
+
+		closeBtn?.addEventListener('click', closeMenu);
+		backdrop.addEventListener('click', closeMenu);
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') closeMenu();
+		});
+
+		menu.querySelectorAll('a').forEach((link) => {
+			link.addEventListener('click', closeMenu);
+		});
+	}
+
+	initMobileMenu();
+	document.addEventListener('astro:after-swap', initMobileMenu);
+</script>

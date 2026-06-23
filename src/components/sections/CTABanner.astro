@@ -1,0 +1,33 @@
+---
+import Button from '../ui/Button.astro';
+import DecorativeMotif from '../ui/DecorativeMotif.astro';
+---
+
+<section class="relative overflow-hidden py-20 sm:py-28">
+	<div class="absolute inset-0 bg-gradient-to-br from-brand-red via-brand-red to-brand-red-dark" aria-hidden="true"></div>
+	<div
+		class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.12),transparent_60%)]"
+		aria-hidden="true"
+	></div>
+	<DecorativeMotif variant="circles" class="left-1/4 top-1/2 h-48 w-48 -translate-y-1/2 text-brand-white/10" />
+
+	<div class="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+		<div class="accent-line-center mb-6 !via-brand-white/40"></div>
+		<h2 class="type-section-title text-brand-cream">
+			Ready to Find Your Next Home?
+		</h2>
+		<p class="type-body mx-auto mt-5 max-w-xl !text-brand-cream/90">
+			Whether you're buying, selling, relocating, or exploring a holistic home search — let's start the
+			conversation.
+		</p>
+		<div class="mt-10">
+			<Button
+				href="/contact"
+				variant="secondary"
+				class="!border-brand-cream/40 !bg-brand-cream !text-brand-red hover:!border-brand-cream hover:!bg-brand-white"
+			>
+				Get in Touch
+			</Button>
+		</div>
+	</div>
+</section>

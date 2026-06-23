@@ -1,0 +1,70 @@
+---
+import DecorativeMotif from '../ui/DecorativeMotif.astro';
+import BrandLogo from '../ui/BrandLogo.astro';
+import { site } from '../../data/site';
+---
+
+<section class="relative overflow-hidden py-20 sm:py-28">
+	<div class="absolute inset-0 bg-gradient-to-br from-brand-ivory via-brand-warm to-brand-cream" aria-hidden="true"></div>
+	<DecorativeMotif variant="compass" class="right-0 top-1/2 h-56 w-56 -translate-y-1/2 opacity-40" />
+
+	<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+		<div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+			<div class="lg:col-span-6 lg:order-2">
+				<p class="type-eyebrow">Meet Your Realtor</p>
+				<h2 class="type-section-title mt-4">
+					Welcome — I'm {site.name.split(' ')[0]}
+				</h2>
+				<div class="accent-line mt-5"></div>
+				<p class="type-body mt-6">
+					As a realtor with {site.affiliation}, I combine local market expertise with a warm, consultative
+					approach. Whether you're buying your first home, relocating to the Dallas-Fort Worth area, or searching with
+					Vastu and Feng Shui in mind — I'm here to guide you every step of the way.
+				</p>
+				<p class="type-body mt-4">
+					My clients value honest advice, responsive communication, and a realtor who truly listens. Let's
+					find a home that supports your life, not just your checklist.
+				</p>
+				<a
+					href="/about"
+					class="type-btn mt-8 inline-flex items-center gap-2 text-brand-red transition-colors hover:text-brand-red-dark"
+				>
+					Learn more about me
+					<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+					</svg>
+				</a>
+			</div>
+
+			<div class="relative lg:col-span-6 lg:order-1">
+				<!-- Layered image frame -->
+				<div class="relative mx-auto max-w-md lg:mx-0">
+					<div
+						class="absolute -left-4 -top-4 h-full w-full rounded-2xl border border-brand-taupe/30 bg-brand-beige/50"
+						aria-hidden="true"
+					></div>
+					<div
+						class="relative aspect-[4/5] overflow-hidden rounded-2xl border border-brand-taupe/40 shadow-[0_16px_48px_-12px_rgba(44,36,32,0.12)]"
+					>
+						<img
+							src="/images/dilzeen-headshot.png"
+							alt="Dilzeen Engineer, DFW Realtor"
+							width={468}
+							height={600}
+							class="h-full w-full object-cover object-[center_20%]"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+					<!-- Overlapping name card -->
+					<div
+						class="absolute -bottom-5 -right-4 rounded-xl border border-brand-beige bg-brand-cream/95 px-5 py-4 shadow-lg backdrop-blur-sm sm:-right-8"
+					>
+						<BrandLogo variant="card" />
+						<p class="type-caption mt-2">DFW Realtor</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

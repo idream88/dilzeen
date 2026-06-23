@@ -1,0 +1,30 @@
+---
+import { site } from '../../data/site';
+
+interface Props {
+	variant?: 'header' | 'mobile' | 'footer' | 'card';
+	class?: string;
+}
+
+const { variant = 'header', class: className = '' } = Astro.props;
+
+const sizeClasses = {
+	header: 'w-[148px] sm:w-[168px] h-auto object-contain',
+	mobile: 'w-[128px] sm:w-[140px] h-auto object-contain',
+	footer: 'w-[200px] sm:max-w-[220px] h-auto object-contain',
+	card: 'w-[125px] h-auto object-contain',
+};
+
+const logoAsset = site.logo.light;
+---
+
+<img
+	src={logoAsset.src}
+	srcset={`${logoAsset.src} 1x, ${logoAsset.src2x} 2x`}
+	alt={site.logo.alt}
+	width={1024}
+	height={793}
+	class:list={[sizeClasses[variant], className]}
+	loading={variant === 'header' || variant === 'mobile' ? 'eager' : 'lazy'}
+	decoding="async"
+/>

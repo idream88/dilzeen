@@ -1,0 +1,47 @@
+---
+import type { StockImage as StockImageType } from '../../data/images';
+
+interface Props {
+	image: StockImageType;
+	aspect?: string;
+	class?: string;
+	loading?: 'lazy' | 'eager';
+	overlay?: boolean;
+	frame?: boolean;
+}
+
+const {
+	image,
+	aspect = 'aspect-[4/3]',
+	class: className = '',
+	loading = 'lazy',
+	overlay = false,
+	frame = true,
+} = Astro.props;
+
+const objectPosition = image.objectPosition ?? 'center center';
+---
+
+<div
+	class:list={[
+		'relative overflow-hidden',
+		frame && 'rounded-2xl border border-brand-taupe/50 shadow-[0_8px_32px_-8px_rgba(44,36,32,0.12)]',
+		aspect,
+		className,
+	]}
+>
+	<img
+		src={image.src}
+		alt={image.alt}
+		class="h-full w-full object-cover"
+		style={`object-position: ${objectPosition}`}
+		loading={loading}
+		decoding="async"
+	/>
+	{overlay && (
+		<div
+			class="absolute inset-0 bg-gradient-to-t from-brand-espresso/25 via-transparent to-brand-cream/10"
+			aria-hidden="true"
+		/>
+	)}
+</div>

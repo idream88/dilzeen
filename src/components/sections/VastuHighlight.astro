@@ -1,0 +1,64 @@
+---
+import Button from '../ui/Button.astro';
+import DecorativeMotif from '../ui/DecorativeMotif.astro';
+import StockImage from '../ui/StockImage.astro';
+import { stockImages } from '../../data/images';
+---
+
+<section class="relative overflow-hidden py-20 sm:py-28">
+	<!-- Warm dark section with layered feel -->
+	<div class="absolute inset-0 bg-brand-espresso" aria-hidden="true"></div>
+	<div
+		class="absolute inset-0 bg-gradient-to-br from-brand-espresso via-brand-charcoal to-brand-espresso"
+		aria-hidden="true"
+	></div>
+	<div
+		class="absolute -right-20 top-1/3 h-80 w-80 rounded-full bg-brand-red/10 blur-3xl"
+		aria-hidden="true"
+	></div>
+	<DecorativeMotif variant="grid" class="left-12 top-16 h-32 w-32 text-brand-white/[0.04]" />
+
+	<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+		<div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+			<div class="lg:col-span-6">
+				<p class="type-eyebrow !text-brand-rose">What Makes This Different</p>
+				<h2 class="type-section-title mt-4 text-brand-cream">
+					Vastu &amp; Feng Shui Home Search
+				</h2>
+				<div class="mt-5 h-px w-12 bg-brand-red/60"></div>
+				<p class="mt-6 text-[1.125rem] leading-[1.7] text-brand-cream/90">
+					For clients who value harmony and intentional living, I offer a thoughtful home search that
+					considers layout, orientation, natural light, and energy flow — alongside traditional market
+					analysis and negotiation.
+				</p>
+				<p class="mt-4 text-[1.125rem] leading-[1.7] text-brand-cream/90">
+					This isn't about rules — it's about finding a space where you can truly thrive.
+				</p>
+				<div class="mt-10">
+					<Button href="/vastu-feng-shui-home-search">Learn About This Approach</Button>
+				</div>
+			</div>
+
+			<div class="relative lg:col-span-6">
+				<div class="relative ml-0 lg:ml-8">
+					<div
+						class="absolute -right-3 -top-3 h-full w-full rounded-2xl border border-brand-cream/10"
+						aria-hidden="true"
+					></div>
+					<StockImage
+						image={stockImages.stylishInterior}
+						aspect="aspect-[4/3]"
+						class="border-brand-cream/15 shadow-2xl"
+						overlay
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Soft transition to next section -->
+	<div
+		class="pointer-events-none absolute -bottom-px left-0 right-0 h-12 bg-gradient-to-b from-transparent to-brand-cream"
+		aria-hidden="true"
+	></div>
+</section>

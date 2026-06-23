@@ -1,0 +1,81 @@
+---
+import { flattenNavLinks } from '../../data/navigation';
+import { site } from '../../data/site';
+import BrandLogo from '../ui/BrandLogo.astro';
+
+const links = flattenNavLinks();
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-brand-black/10 bg-brand-black text-brand-white">
+	<div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-12 lg:px-8">
+		<div class="grid gap-y-12 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-10 lg:grid-cols-4">
+			<!-- Brand -->
+			<div>
+				<BrandLogo variant="footer" />
+				<p class="type-footer-muted mt-4">{site.tagline}</p>
+				<p class="type-footer-muted mt-2">{site.affiliation}</p>
+			</div>
+
+			<!-- Quick Links -->
+			<div>
+				<p class="type-footer-heading">Quick Links</p>
+				<ul class="mt-4 space-y-2.5">
+					{
+						links.map((link) => (
+							<li>
+								<a
+									href={link.href}
+									class="type-footer-body transition-colors hover:text-brand-white"
+								>
+									{link.label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+
+			<!-- Service Area -->
+			<div>
+				<p class="type-footer-heading">Service Area</p>
+				<p class="type-footer-body mt-4">
+					Serving Southlake, Grapevine, Colleyville, Keller, and the greater DFW metroplex.
+				</p>
+				<p class="type-footer-muted mt-3">
+					Specializing in relocation, investments, and Vastu &amp; Feng Shui home search.
+				</p>
+			</div>
+
+			<!-- Contact -->
+			<div>
+				<p class="type-footer-heading">Contact</p>
+				<ul class="type-footer-body mt-4 space-y-2.5">
+					<li>
+						<a href={`tel:${site.phone.replace(/\D/g, '')}`} class="transition-colors hover:text-brand-white">
+							{site.phone}
+						</a>
+					</li>
+					<li>
+						<a href={`mailto:${site.email}`} class="transition-colors hover:text-brand-white">
+							{site.email}
+						</a>
+					</li>
+					<li class="type-footer-muted">
+						{site.address.street}<br />
+						{site.address.suite}<br />
+						{site.address.city}, {site.address.state} {site.address.zip}
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="mt-12 border-t border-brand-white/15 pt-8 text-center text-[0.8125rem] leading-[1.7] text-brand-white/70 sm:mt-10">
+			<p>&copy; {year} {site.name}. All rights reserved.</p>
+			<p class="mt-2">
+				{site.affiliation} | {site.license} | Equal Housing Opportunity
+			</p>
+			<!-- PLACEHOLDER: Add Keller Williams required disclaimers and EHO logo when provided -->
+		</div>
+	</div>
+</footer>

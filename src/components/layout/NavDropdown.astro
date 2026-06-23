@@ -1,0 +1,51 @@
+---
+import type { NavItem } from '../../data/navigation';
+import { isActive, isNavItemActive } from '../../data/navigation';
+
+interface Props {
+	item: NavItem;
+	pathname: string;
+}
+
+const { item, pathname } = Astro.props;
+const active = isNavItemActive(pathname, item);
+---
+
+<li class="relative group">
+	<button
+		type="button"
+		class:list={[
+			'flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors',
+			active ? 'text-brand-red' : 'text-brand-black hover:text-brand-red',
+		]}
+		aria-haspopup="true"
+		aria-expanded="false"
+	>
+		{item.label}
+		<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+		</svg>
+	</button>
+
+	<ul
+		class="invisible absolute left-0 top-full z-50 min-w-[220px] rounded-md border border-brand-black/10 bg-brand-white py-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+		role="menu"
+	>
+		{item.children?.map((child) => (
+			<li role="none">
+				<a
+					href={child.href}
+					role="menuitem"
+					class:list={[
+						'block px-4 py-2 text-sm transition-colors',
+						isActive(pathname, child.href)
+							? 'text-brand-red'
+							: 'text-brand-black hover:bg-brand-warm hover:text-brand-red',
+					]}
+				>
+					{child.label}
+				</a>
+			</li>
+		))}
+	</ul>
+</li>

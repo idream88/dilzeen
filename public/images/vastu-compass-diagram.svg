@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none" role="img" aria-label="Compass layout diagram showing directional areas of a home">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f2ed"/>
+      <stop offset="100%" stop-color="#faf8f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="480" rx="24" fill="url(#bg)"/>
+  <circle cx="240" cy="240" r="200" stroke="#d4ccc3" stroke-width="1"/>
+  <circle cx="240" cy="240" r="150" stroke="#d4ccc3" stroke-width="0.75" opacity="0.7"/>
+  <circle cx="240" cy="240" r="100" stroke="#d4ccc3" stroke-width="0.75" opacity="0.5"/>
+  <circle cx="240" cy="240" r="50" fill="#ebe6df" stroke="#b91c38" stroke-width="1" opacity="0.6"/>
+  <line x1="240" y1="40" x2="240" y2="440" stroke="#c4a898" stroke-width="0.75"/>
+  <line x1="40" y1="240" x2="440" y2="240" stroke="#c4a898" stroke-width="0.75"/>
+  <line x1="78" y1="78" x2="402" y2="402" stroke="#c4a898" stroke-width="0.5" opacity="0.6"/>
+  <line x1="402" y1="78" x2="78" y2="402" stroke="#c4a898" stroke-width="0.5" opacity="0.6"/>
+  <polygon points="240,52 246,68 234,68" fill="#b91c38" opacity="0.7"/>
+  <text x="240" y="32" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="600" fill="#2c2420" letter-spacing="0.08em">NORTH</text>
+  <text x="240" y="468" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="600" fill="#2c2420" letter-spacing="0.08em">SOUTH</text>
+  <text x="18" y="244" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="600" fill="#2c2420" letter-spacing="0.08em" transform="rotate(-90 18 244)">WEST</text>
+  <text x="462" y="244" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="600" fill="#2c2420" letter-spacing="0.08em" transform="rotate(90 462 244)">EAST</text>
+  <text x="240" y="246" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="13" font-weight="500" fill="#b91c38">Center</text>
+  <text x="240" y="100" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Career &amp; Path</text>
+  <text x="340" y="130" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Knowledge</text>
+  <text x="380" y="244" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Family &amp; Health</text>
+  <text x="340" y="360" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Wealth</text>
+  <text x="240" y="390" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Fame &amp; Reputation</text>
+  <text x="140" y="360" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Relationships</text>
+  <text x="100" y="244" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Creativity</text>
+  <text x="140" y="130" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Helpful People</text>
+  <rect x="170" y="170" width="140" height="140" rx="4" stroke="#b91c38" stroke-width="0.75" stroke-dasharray="4 4" opacity="0.35"/>
+  <text x="240" y="455" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9" fill="#3d3632" opacity="0.55">Directional layout lens — not rigid rules</text>
+</svg>

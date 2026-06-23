@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InnerPageContent from '../components/ui/InnerPageContent.astro';
+import { pages } from '../data/placeholders';
+import { formatTitle } from '../data/site';
+
+const content = pages.sellers;
+---
+
+<BaseLayout title={formatTitle(content.title)} description={content.description}>
+	<InnerPageContent content={content} />
+</BaseLayout>
