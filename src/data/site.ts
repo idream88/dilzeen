@@ -11,10 +11,10 @@ export const site = {
 		},
 		alt: 'Dilzeen Engineer logo',
 	},
-	tagline: 'Your DFW Realtor with a Vastu & Feng Shui Home Search Edge',
+	tagline: 'DFW Realtor with local expertise and a Vastu & Feng Shui home search perspective',
 	affiliation: 'Keller Williams Southlake',
 	defaultDescription:
-		'DFW realtor with Keller Williams Southlake, specializing in relocation, investments, and Vastu & Feng Shui home search across the Dallas-Fort Worth area.',
+		'Dilzeen Engineer is a DFW realtor with Keller Williams Southlake, helping buyers, sellers, and relocating families with relocation support, investments, and Vastu & Feng Shui home search across Dallas-Fort Worth.',
 	url: 'https://www.example.com',
 	locale: 'en_US',
 	phone: '(949) 813-4699',

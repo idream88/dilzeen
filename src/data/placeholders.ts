@@ -47,7 +47,7 @@ export interface PageContent {
 export const pages: Record<string, PageContent> = {
 	about: {
 		title: 'About Dilzeen',
-		subtitle: 'Local real estate guidance with a thoughtful, holistic approach to finding home.',
+		subtitle: 'Local real estate guidance with a warm, personal approach to finding home.',
 		description:
 			'Learn about Dilzeen Engineer, a DFW realtor with Keller Williams Southlake, offering relocation support, investor guidance, and Vastu & Feng Shui home search.',
 		heroImage: stockImages.elegantDining,
@@ -59,16 +59,16 @@ export const pages: Record<string, PageContent> = {
 			title: 'Realtor® & Feng Shui Master',
 		},
 		intro: [
-			'Dilzeen Engineer is a real estate professional serving the Dallas-Fort Worth area through Keller Williams Southlake. She brings a warm, client-first approach to buyers, sellers, investors, and relocating families who want to make confident decisions during one of life\'s most important transitions.',
-			'With over a decade of experience in Vastu and Feng Shui, Dilzeen offers a unique perspective that goes beyond the traditional home search. Since 2012, she has advised friends and family on property decisions and living spaces, helping them think not only about location, layout, and investment value, but also about harmony, flow, and long-term comfort.',
-			'Having personally navigated moves across state lines and internationally, Dilzeen understands how emotional and detailed the relocation process can be. Her goal is to make each step feel clear, supported, and manageable — from the first conversation to closing day.',
-			'While Vastu and Feng Shui may not be a priority for every client, Dilzeen is always ready to incorporate those principles for buyers, sellers, and builders who value a more intentional approach to home. Whether you are searching for your first home, investing in property, relocating to DFW, or planning a space that better supports your lifestyle, Dilzeen is here to help you find more than a property — she is here to help you find home.',
+			'I\'m Dilzeen Engineer, a realtor serving the Dallas-Fort Worth area through Keller Williams Southlake. I take a warm, client-first approach with buyers, sellers, investors, and relocating families who want to make confident decisions during one of life\'s most important transitions.',
+			'With more than a decade of experience in Vastu and Feng Shui, I look at each home with both practical real estate insight and a deeper understanding of balance, layout, and energy. Since 2012, I\'ve advised friends and family on property decisions and living spaces, helping them think about location, layout, and investment value, as well as harmony, flow, and long-term comfort.',
+			'I know how overwhelming a move can feel. I\'ve moved across state lines and internationally, so I understand how important it is to find a home that feels right, not just on paper, but in everyday life. My goal is to make each step of the process feel clear, supported, and manageable, from our first conversation to closing day.',
+			'Not every client is looking for Vastu or Feng Shui guidance, and that\'s okay. For the clients who do want that perspective, I can help them look at a home\'s layout, flow, direction, and overall feel before they make a decision. Whether you\'re searching for your first home, investing in property, relocating to DFW, or planning a space that better supports your lifestyle, I\'m here to help you find more than a property. I\'m here to help you find home.',
 		],
 		features: [
 			{
 				title: 'Dallas-Fort Worth Market Guidance',
 				description:
-					'Local insight into neighborhoods, schools, lifestyle fit, and market opportunities throughout DFW — including Southlake, Grapevine, Colleyville, Keller, and surrounding communities.',
+					'Local insight into neighborhoods, schools, lifestyle fit, and market opportunities throughout DFW, including Southlake, Grapevine, Colleyville, Keller, and surrounding communities.',
 			},
 			{
 				title: 'Relocation Support',
@@ -85,7 +85,7 @@ export const pages: Record<string, PageContent> = {
 			eyebrow: 'Professional Credential',
 			title: 'Certified Staging Advocate',
 			description:
-				'Dilzeen is a RESA® Certified Staging Advocate™, having completed the Staging to Sell, What Every Agent Should Know™ course through the Real Estate Staging Association. For sellers, this means practical guidance on how to present a home so it shows at its best — from first impressions to listing photos and showings. Staging insight complements market strategy, helping properties feel inviting, well cared for, and ready for buyers without unnecessary expense or stress.',
+				'I\'m a RESA® Certified Staging Advocate™, having completed the Staging to Sell, What Every Agent Should Know™ course through the Real Estate Staging Association. For sellers, that means practical guidance on how to present a home so it shows at its best, from first impressions to listing photos and showings. Staging insight works alongside market strategy, helping properties feel inviting, well cared for, and ready for buyers without unnecessary expense or stress.',
 			designation: 'RESA® Certified Staging Advocate™ Designation',
 			certificate: {
 				src: '/images/dilzeen-resa-certificate.png',
@@ -105,7 +105,7 @@ export const pages: Record<string, PageContent> = {
 			{
 				title: 'Strategize Together',
 				description:
-					'Dilzeen helps you create a clear plan for buying, selling, investing, relocating, or evaluating a home through a holistic lens.',
+					'I\'ll help you create a clear plan for buying, selling, investing, relocating, or evaluating a home with both practical and intentional criteria in mind.',
 			},
 			{
 				title: 'Guide to Closing',
@@ -116,15 +116,15 @@ export const pages: Record<string, PageContent> = {
 	},
 	'relocation-services': {
 		title: 'Relocation Services',
-		subtitle: 'Moving to the Dallas-Fort Worth area? Let\'s make your transition seamless.',
+		subtitle: 'Moving to the Dallas-Fort Worth area? I\'ll help make your transition smoother.',
 		description:
 			'Relocation services for families and professionals moving to the Dallas-Fort Worth metroplex. Area orientation, home search, and closing support.',
 		heroImage: stockImages.coupleDreamHome,
 		supportingImages: [stockImages.suburbanRedRoof],
 		intro: [
-			'Relocating to a new city is exciting — and overwhelming. Dilzeen Engineer provides hands-on relocation support for families, executives, and professionals moving to the Dallas-Fort Worth area.',
-			'From virtual introductions and neighborhood tours to school district overviews and commute planning, you\'ll receive practical, local insight at every step. Dilzeen coordinates closely with your timeline so you can focus on settling in, not stressing out.',
-			'Whether your employer is sponsoring a move or you\'re relocating independently, you\'ll have a trusted advocate on the ground before you arrive.',
+			'Relocating to a new city is exciting, and it can also feel overwhelming. I provide hands-on relocation support for families, executives, and professionals moving to the Dallas-Fort Worth area.',
+			'From virtual introductions and neighborhood tours to school district overviews and commute planning, you\'ll receive practical, local insight at every step. I coordinate closely with your timeline so you can focus on settling in, not stressing out.',
+			'Whether your employer is sponsoring a move or you\'re relocating on your own, you\'ll have someone on the ground who knows the area and is ready to advocate for you before you arrive.',
 		],
 		features: [
 			{
@@ -147,7 +147,7 @@ export const pages: Record<string, PageContent> = {
 			},
 			{
 				title: 'Area & Home Search',
-				description: 'Tour neighborhoods and properties — in person or virtually — with local context.',
+				description: 'Tour neighborhoods and properties in person or virtually, with local context.',
 			},
 			{
 				title: 'Close & Settle In',
@@ -159,9 +159,9 @@ export const pages: Record<string, PageContent> = {
 		title: 'Vastu & Feng Shui Home Search',
 		subtitle: 'Find a home that supports harmony, flow, and intentional living.',
 		description:
-			'Vastu and Feng Shui home search services in the Dallas-Fort Worth area. A holistic home search with practical layout, orientation, and flow guidance alongside traditional real estate criteria.',
+			'Vastu and Feng Shui home search services in the Dallas-Fort Worth area. Practical layout, orientation, and flow guidance alongside traditional real estate criteria.',
 		intro: [
-			'Dilzeen combines real estate guidance with Vastu and Feng Shui awareness to help clients evaluate homes through both a practical and holistic lens.',
+			'I combine real estate guidance with Vastu and Feng Shui awareness to help clients evaluate homes with both practical insight and attention to how a space actually feels.',
 		],
 		features: [
 			{
@@ -174,7 +174,7 @@ export const pages: Record<string, PageContent> = {
 			},
 			{
 				title: 'Integrated Search Strategy',
-				description: 'Combine holistic criteria with location, value, schools, and investment potential.',
+				description: 'Combine layout and flow criteria with location, value, schools, and investment potential.',
 			},
 		],
 	},
@@ -189,13 +189,13 @@ export const pages: Record<string, PageContent> = {
 			eyebrow: 'Investor Guidance',
 			title: 'Clear, Property-Focused Analysis',
 			description:
-				'For investors, Dilzeen brings data-driven market perspective — evaluating rental yield, appreciation trends, and neighborhood growth with the same attention to detail applied to every property review.',
+				'For investors, I bring a data-driven market perspective, evaluating rental yield, appreciation trends, and neighborhood growth with the same attention to detail I apply to every property review.',
 			image: stockImages.grayModernExterior,
 		},
 		intro: [
-			'Whether you are purchasing your first home or adding to an investment portfolio, Dilzeen Engineer provides clear, data-informed guidance tailored to your goals. The Dallas-Fort Worth market offers strong opportunities — and navigating it well requires local expertise.',
-			'For buyers, Dilzeen simplifies the process: pre-approval coordination, targeted home searches, offer strategy, inspection guidance, and closing support. For investors, the focus shifts to cash flow, appreciation potential, tenant demand, and long-term portfolio strategy.',
-			'Every client receives honest market perspective — not hype — so you can move forward with confidence.',
+			'Whether you\'re purchasing your first home or adding to an investment portfolio, I provide clear, data-informed guidance shaped around your goals. The Dallas-Fort Worth market offers strong opportunities, and navigating it well takes local expertise.',
+			'For buyers, I simplify the process: pre-approval coordination, targeted home searches, offer strategy, inspection guidance, and closing support. For investors, the focus shifts to cash flow, appreciation potential, tenant demand, and long-term portfolio strategy.',
+			'Every client receives honest market perspective, not hype, so you can move forward with confidence.',
 		],
 		features: [
 			{
@@ -220,9 +220,9 @@ export const pages: Record<string, PageContent> = {
 		heroImage: stockImages.grayModernExterior,
 		supportingImages: [stockImages.luxuryGardenExterior, stockImages.suburbanRedRoof],
 		intro: [
-			'Selling a home is both a financial decision and an emotional one. Dilzeen Engineer helps sellers across DFW navigate the process with a clear pricing strategy, professional marketing, and skilled negotiation — all designed to achieve the best possible outcome.',
-			'From initial consultation through closing, you\'ll receive honest feedback on pricing, staging, and timing. Dilzeen leverages Keller Williams\' marketing resources alongside personalized outreach to ensure your home reaches qualified buyers.',
-			'The goal is not just to sell — it\'s to sell well, on your timeline, with as little stress as possible.',
+			'Selling a home is both a financial decision and an emotional one. I help sellers across DFW navigate the process with a clear pricing strategy, professional marketing, and skilled negotiation, all designed to achieve the best possible outcome.',
+			'From initial consultation through closing, you\'ll receive honest feedback on pricing, staging, and timing. I use Keller Williams\' marketing resources alongside personalized outreach to ensure your home reaches qualified buyers.',
+			'The goal is not just to sell. It\'s to sell well, on your timeline, with as little stress as possible.',
 		],
 		features: [
 			{
@@ -247,8 +247,8 @@ export const pages: Record<string, PageContent> = {
 		heroImage: stockImages.luxuryRentalHome,
 		introImage: stockImages.luxuryRentalHome,
 		intro: [
-			'Whether you are searching for a rental home or leasing out a property you own, Dilzeen Engineer provides straightforward, professional leasing support across the Dallas-Fort Worth area.',
-			'For tenants, Dilzeen helps identify properties that match your lifestyle, commute, and budget — with clear guidance on lease terms and application processes. For landlords, services include market-rate analysis, tenant placement support, and lease coordination.',
+			'Whether you\'re searching for a rental home or leasing out a property you own, I provide straightforward, professional leasing support across the Dallas-Fort Worth area.',
+			'For tenants, I help identify properties that match your lifestyle, commute, and budget, with clear guidance on lease terms and application processes. For landlords, my services include market-rate analysis, tenant placement support, and lease coordination.',
 			'Property management referrals are available for owners who prefer hands-off oversight.',
 		],
 		features: [
@@ -272,7 +272,7 @@ export const pages: Record<string, PageContent> = {
 		description:
 			'Custom home floor plan review and builder floor plan consulting. Practical Feng Shui for builders and balanced home design before construction begins.',
 		intro: [
-			'Dilzeen works with custom home builders, residential developers, and design/build teams to review floor plans using Feng Shui and Vastu principles before construction begins.',
+			'I work with custom home builders, residential developers, and design/build teams to review floor plans using Feng Shui and Vastu principles before construction begins.',
 		],
 		features: [
 			{
@@ -291,23 +291,23 @@ export const pages: Record<string, PageContent> = {
 	},
 	closings: {
 		title: 'Past Closings',
-		subtitle: 'Homes, milestones, and new beginnings Dilzeen has helped make possible.',
+		subtitle: 'Homes, milestones, and new beginnings I\'ve helped make possible.',
 		description:
-			'Explore past closings and success stories from Dilzeen Engineer — homes successfully bought, sold, and rented across Dallas, Fort Worth, Southlake, and the greater DFW area.',
+			'Explore past closings and success stories from Dilzeen Engineer. Homes successfully bought, sold, and rented across Dallas, Fort Worth, Southlake, and the greater DFW area.',
 		intro: [
-			'Every closing represents more than a completed transaction — it represents a new chapter, a fresh beginning, and a place where memories will be made.',
+			'Every closing is more than a completed transaction. It\'s a new chapter, a fresh beginning, and a place where memories will be made.',
 		],
 		features: [],
 	},
 	reviews: {
 		title: 'Client Reviews',
-		subtitle: 'Hear from clients who trusted Dilzeen with their real estate journey.',
+		subtitle: 'Hear from clients who worked with me on their real estate journey.',
 		description:
 			'Client reviews and testimonials for Dilzeen Engineer, DFW realtor with Keller Williams Southlake.',
 		heroImage: stockImages.elegantDining,
 		intro: [
-			'Nothing speaks louder than the experience of clients who have worked with Dilzeen Engineer. From first-time buyers to relocating families and seasoned investors, clients consistently highlight Dilzeen\'s warmth, responsiveness, and deep local knowledge.',
-			'Read what past clients have shared about their experience — and when you\'re ready, reach out to start your own journey.',
+			'Nothing speaks louder than the experience of clients I\'ve had the privilege to work with. From first-time buyers to relocating families and seasoned investors, clients often mention my warmth, responsiveness, and deep local knowledge.',
+			'Read what past clients have shared about their experience. When you\'re ready, reach out to start your own journey.',
 		],
 		features: [],
 	},
@@ -317,7 +317,7 @@ export const pages: Record<string, PageContent> = {
 		description:
 			'Contact Dilzeen Engineer, DFW realtor with Keller Williams Southlake. Schedule a consultation for buying, selling, relocation, or Vastu & Feng Shui home search.',
 		intro: [
-			'Whether you have a specific property in mind or are just beginning to explore your options, Dilzeen is here to help. Reach out by phone, email, or the form below — and expect a prompt, personal response.',
+			'Whether you have a specific property in mind or are just beginning to explore your options, I\'m here to help. Reach out by phone, email, or the form below, and expect a prompt, personal response.',
 		],
 		features: [],
 	},
@@ -332,7 +332,7 @@ export const testimonials = [
 	},
 	{
 		quote:
-			'As an investor, I appreciated Dilzeen\'s honest market analysis. No pressure — just solid data and great negotiation on our behalf.',
+			'As an investor, I appreciated Dilzeen\'s honest market analysis. No pressure, just solid data and great negotiation on our behalf.',
 		name: 'James T.',
 		location: 'Grapevine',
 	},
@@ -365,7 +365,7 @@ export const testimonials = [
 export const whyChoose = [
 	{
 		title: 'Local DFW Expertise',
-		description: 'Deep knowledge of Dallas-Fort Worth neighborhoods, schools, and market trends — including Southlake and surrounding communities.',
+		description: 'Deep knowledge of Dallas-Fort Worth neighborhoods, schools, and market trends, including Southlake and surrounding communities.',
 		icon: 'local' as const,
 	},
 	{
@@ -379,8 +379,8 @@ export const whyChoose = [
 		icon: 'investor' as const,
 	},
 	{
-		title: 'Holistic Home Search',
-		description: 'Vastu & Feng Shui perspective for clients who value harmony and intentional living.',
+		title: 'Vastu & Feng Shui Home Search',
+		description: 'Layout, orientation, and energy-flow perspective for clients who value intentional living.',
 		icon: 'holistic' as const,
 	},
 ];
@@ -388,12 +388,12 @@ export const whyChoose = [
 export const services = [
 	{
 		title: 'Relocation Services',
-		description: 'Seamless moves to the Dallas-Fort Worth metroplex.',
+		description: 'Thoughtful support for moves to the Dallas-Fort Worth metroplex.',
 		href: '/relocation-services',
 	},
 	{
 		title: 'Buyers & Investors',
-		description: 'Confident decisions for every stage of your journey.',
+		description: 'Clear guidance for first-time buyers and seasoned investors.',
 		href: '/buyers-investors',
 	},
 	{

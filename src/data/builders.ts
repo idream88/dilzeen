@@ -8,7 +8,7 @@ export const buildersPage = {
 		eyebrow: 'Feng Shui & Vastu for Builders',
 		h1: 'Build Homes That Feel Balanced From the Blueprint',
 		subheadline:
-			'Help your clients feel the difference the moment they walk in. Dilzeen works with builders to review floor plans, room placement, entry flow, and directional layout using Feng Shui and Vastu principles before construction begins.',
+			'Help your clients feel the difference the moment they walk in. I work with builders to review floor plans, room placement, entry flow, and directional layout using Feng Shui and Vastu principles before construction begins.',
 		primaryCta: {
 			text: 'Schedule a Builder Consultation',
 			href: '/contact',
@@ -22,12 +22,12 @@ export const buildersPage = {
 		h2: 'A Thoughtful Layer of Design Most Builders Overlook',
 		paragraphs: [
 			'Great homes are not just measured in square footage, finishes, or curb appeal. They are felt in the way people move through them, gather in them, rest in them, and build their lives inside them.',
-			'Dilzeen helps builders add an intentional layer of Feng Shui and Vastu insight to their floor plans. By reviewing the home\'s direction, entry points, room placement, element balance, and overall flow, she helps identify opportunities to create homes that feel more harmonious, functional, and aligned for the families who will live there.',
-			'With over a decade of experience advising on property and home layout since 2012, Dilzeen combines real estate insight with practical Feng Shui home design and Vastu home design principles — helping teams create balanced home design from the earliest planning stages.',
+			'I help builders add an intentional layer of Feng Shui and Vastu insight to their floor plans. By reviewing the home\'s direction, entry points, room placement, element balance, and overall flow, I help identify opportunities to create homes that feel more harmonious, functional, and aligned for the families who will live there.',
+			'With more than a decade of experience advising on property and home layout since 2012, I combine real estate insight with practical Feng Shui and Vastu home design principles, helping teams create balanced home design from the earliest planning stages.',
 		],
 	},
 	whyBuilders: {
-		h2: 'Why Builders Work With Dilzeen',
+		h2: 'Why Builders Work With Me',
 		cards: [
 			{
 				title: 'Floor Plan Review Before Construction',
@@ -47,12 +47,12 @@ export const buildersPage = {
 			{
 				title: 'Practical Recommendations',
 				description:
-					'Dilzeen provides clear, realistic feedback that respects the builder\'s plans, budget, lot constraints, and construction process.',
+					'I provide clear, realistic feedback that respects the builder\'s plans, budget, lot constraints, and construction process.',
 			},
 		],
 	},
 	services: {
-		h2: 'How Dilzeen Can Help Builders',
+		h2: 'How I Can Help Builders',
 		items: [
 			{
 				title: 'Pre-Construction Floor Plan Review',
@@ -90,9 +90,9 @@ export const buildersPage = {
 					'Send the floor plan, lot orientation, home direction, and any known design goals.',
 			},
 			{
-				title: 'Dilzeen Reviews the Layout',
+				title: 'I Review the Layout',
 				description:
-					'She reviews the home through the lens of Feng Shui, Vastu, directional placement, room purpose, and overall flow.',
+					'I review the home through the lens of Feng Shui, Vastu, directional placement, room purpose, and overall flow.',
 			},
 			{
 				title: 'Receive Practical Feedback',
@@ -120,13 +120,13 @@ export const buildersPage = {
 	specialty: {
 		h2: 'Designed for Custom Homes, Luxury Builds & Client-Focused Projects',
 		paragraphs: [
-			'Whether you are building a custom home, designing a luxury residence, developing a spec home, or helping a client finalize their dream layout, Dilzeen can provide a specialized review that brings an added level of care to the planning process.',
-			'Her role is not to replace the architect or builder. Her role is to help the team see the home from another perspective: how the space supports the people who will live there. Through her "Blueprints of Balance" approach, she evaluates compass directions, room placement, element balance, and layout principles for spaces such as the primary bedroom, kitchen, family room, study, and entry — all in service of a more intentional floor plan.',
+			'Whether you are building a custom home, designing a luxury residence, developing a spec home, or helping a client finalize their dream layout, I can provide a specialized review that brings an added level of care to the planning process.',
+			'My role is not to replace the architect or builder. My role is to help the team see the home from another perspective: how the space supports the people who will live there. Through my "Blueprints of Balance" approach, I evaluate compass directions, room placement, element balance, and layout principles for spaces such as the primary bedroom, kitchen, family room, study, and entry, all in service of a more intentional floor plan.',
 		],
 	},
 	cta: {
 		h2: 'Bring Balance Into the Blueprint',
-		body: 'Before the foundation is poured, make sure the plan supports the life your clients want to build inside the home. Partner with Dilzeen for Feng Shui and Vastu floor plan consulting designed specifically for builders.',
+		body: 'Before the foundation is poured, make sure the plan supports the life your clients want to build inside the home. Work with me for Feng Shui and Vastu floor plan consulting designed specifically for builders.',
 		button: {
 			text: 'Schedule a Builder Consultation',
 			href: '/contact',
@@ -138,24 +138,24 @@ export const buildersPage = {
 		h2: 'Frequently Asked Questions',
 		items: [
 			{
-				question: 'When should a builder involve Dilzeen?',
+				question: 'When should a builder involve you?',
 				answer:
-					'The ideal time is during the planning and design phase — before construction begins. That is when room placement, entry flow, and directional layout can still be adjusted with minimal cost or delay. Many builders also bring Dilzeen in when a client requests Feng Shui or Vastu guidance, or when a floor plan needs a thoughtful second opinion before final approvals.',
+					'The ideal time is during the planning and design phase, before construction begins. That is when room placement, entry flow, and directional layout can still be adjusted with minimal cost or delay. Many builders also bring me in when a client requests Feng Shui or Vastu guidance, or when a floor plan needs a thoughtful second opinion before final approvals.',
 			},
 			{
-				question: 'Can Dilzeen work with an existing floor plan?',
+				question: 'Can you work with an existing floor plan?',
 				answer:
-					'Yes. Dilzeen can review an existing or near-final floor plan and provide practical recommendations for improvement. Even small adjustments to room placement, entry orientation, or traffic flow can make a meaningful difference in how a home feels once it is built.',
+					'Yes. I can review an existing or near-final floor plan and provide practical recommendations for improvement. Even small adjustments to room placement, entry orientation, or traffic flow can make a meaningful difference in how a home feels once it is built.',
 			},
 			{
 				question: 'Does this replace the architect or designer?',
 				answer:
-					'No. Dilzeen\'s role is complementary. She does not replace the architect, builder, or interior designer. Instead, she adds a specialized layer of Feng Shui and Vastu insight to the planning conversation — helping the team consider how layout choices support comfort, flow, and intentional living alongside structural and aesthetic goals.',
+					'No. My role is complementary. I do not replace the architect, builder, or interior designer. Instead, I add a specialized layer of Feng Shui and Vastu insight to the planning conversation, helping the team consider how layout choices support comfort, flow, and intentional living alongside structural and aesthetic goals.',
 			},
 			{
 				question: 'Is Feng Shui and Vastu only for certain buyers?',
 				answer:
-					'Not at all. While some buyers specifically seek Feng Shui or Vastu guidance, the principles behind balanced home design — good flow, thoughtful room placement, natural light, and a sense of harmony — appeal to a wide range of homeowners. Builder floor plan consulting helps create homes that feel more livable and distinctive, regardless of a buyer\'s background or beliefs.',
+					'Not at all. While some buyers specifically seek Feng Shui or Vastu guidance, the principles behind balanced home design (good flow, thoughtful room placement, natural light, and a sense of harmony) appeal to a wide range of homeowners. Builder floor plan consulting helps create homes that feel more livable and distinctive, regardless of a buyer\'s background or beliefs.',
 			},
 		],
 	},

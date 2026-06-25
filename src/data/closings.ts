@@ -83,17 +83,17 @@ export const closingsPage = {
 	hero: {
 		eyebrow: 'Success Stories',
 		title: 'Past Closings',
-		subtitle: 'Homes, milestones, and new beginnings Dilzeen has helped make possible.',
+		subtitle: 'Homes, milestones, and new beginnings I\'ve helped make possible.',
 		intro: [
-			'Every closing represents more than a completed transaction — it represents a new chapter, a fresh beginning, and a place where memories will be made. Explore a few of the homes Dilzeen has helped clients successfully close with care, guidance, and attention to detail.',
-			'From first conversations to final signatures, Dilzeen brings a calm, thoughtful approach to each real estate journey.',
+			'Every closing is more than a completed transaction. It\'s a new chapter, a fresh beginning, and a place where memories will be made. Here are a few of the homes I\'ve helped clients close with care, guidance, and attention to detail.',
+			'From first conversations to final signatures, I bring a calm, thoughtful approach to each real estate journey.',
 		],
 	},
 	galleryIntro:
-		'Each home tells a story. These past closings reflect the trust clients have placed in Dilzeen to guide them through one of life’s most meaningful decisions.',
+		'Each home tells a story. These past closings reflect the trust clients have placed in me to guide them through one of life\'s most meaningful decisions.',
 	cta: {
 		title: 'Ready for Your Next Chapter?',
-		body: 'Whether you are preparing to buy, sell, relocate, or invest, Dilzeen is ready to help you move forward with confidence.',
+		body: 'Whether you\'re preparing to buy, sell, relocate, or invest, I\'m ready to help you move forward with confidence.',
 		button: {
 			text: 'Start Your Home Journey',
 			href: '/contact',

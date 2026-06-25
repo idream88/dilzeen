@@ -29,5 +29,5 @@
   <text x="100" y="244" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Creativity</text>
   <text x="140" y="130" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="10" fill="#3d3632" opacity="0.85">Helpful People</text>
   <rect x="170" y="170" width="140" height="140" rx="4" stroke="#b91c38" stroke-width="0.75" stroke-dasharray="4 4" opacity="0.35"/>
-  <text x="240" y="455" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9" fill="#3d3632" opacity="0.55">Directional layout lens — not rigid rules</text>
+  <text x="240" y="455" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="9" fill="#3d3632" opacity="0.55">Directional layout lens, not rigid rules</text>
 </svg>
