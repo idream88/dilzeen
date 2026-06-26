@@ -9,7 +9,9 @@ const { title, subtitle } = Astro.props;
 
 <section class="bg-brand-warm py-16 sm:py-20">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-		<h1 class="text-4xl font-semibold tracking-tight text-brand-black sm:text-5xl">{title}</h1>
-		{subtitle && <p class="mt-4 max-w-2xl text-lg text-brand-black/70">{subtitle}</p>}
+		<div data-reveal-stagger>
+			<h1 class="text-4xl font-semibold tracking-tight text-brand-black sm:text-5xl" data-reveal data-reveal-immediate>{title}</h1>
+			{subtitle && <p class="mt-4 max-w-2xl text-lg text-brand-black/70" data-reveal data-reveal-immediate>{subtitle}</p>}
+		</div>
 	</div>
 </section>

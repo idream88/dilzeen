@@ -8,6 +8,7 @@ interface Props {
 	loading?: 'lazy' | 'eager';
 	overlay?: boolean;
 	frame?: boolean;
+	zoom?: boolean;
 }
 
 const {
@@ -17,6 +18,7 @@ const {
 	loading = 'lazy',
 	overlay = false,
 	frame = true,
+	zoom = true,
 } = Astro.props;
 
 const objectPosition = image.objectPosition ?? 'center center';
@@ -24,7 +26,8 @@ const objectPosition = image.objectPosition ?? 'center center';
 
 <div
 	class:list={[
-		'relative overflow-hidden',
+		'relative',
+		zoom && 'img-zoom',
 		frame && 'rounded-2xl border border-brand-taupe/50 shadow-[0_8px_32px_-8px_rgba(44,36,32,0.12)]',
 		aspect,
 		className,

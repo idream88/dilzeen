@@ -10,7 +10,7 @@ const { eyebrow, title, subtitle, align = 'center' } = Astro.props;
 const alignClass = align === 'center' ? 'text-center mx-auto' : 'text-left';
 ---
 
-<div class:list={['max-w-2xl', alignClass]}>
+<div class:list={['max-w-2xl', alignClass]} data-reveal>
 	{
 		eyebrow && (
 			<p class="type-eyebrow mb-3">{eyebrow}</p>

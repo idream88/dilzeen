@@ -10,7 +10,8 @@ const { title, description, href } = Astro.props;
 
 <a
 	href={href}
-	class="card-lift group relative flex flex-col overflow-hidden rounded-2xl border border-brand-taupe/40 bg-brand-ivory/70 p-7 shadow-[0_4px_20px_-6px_rgba(44,36,32,0.06)] backdrop-blur-sm"
+	data-reveal
+	class="card-lift group relative flex flex-col overflow-hidden rounded-2xl border border-brand-taupe/40 bg-brand-ivory/70 p-7 backdrop-blur-sm"
 >
 	<div
 		class="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-brand-rose/10 transition-colors duration-300 group-hover:bg-brand-rose/20"
@@ -23,7 +24,7 @@ const { title, description, href } = Astro.props;
 	<p class="type-body-sm relative mt-4 flex-1">{description}</p>
 	<span class="type-btn relative mt-5 inline-flex items-center gap-1.5 text-brand-red">
 		Learn more
-		<svg class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+		<svg class="btn-arrow h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 		</svg>
 	</span>

@@ -35,9 +35,9 @@ const overlayClasses = {
 	<DecorativeMotif variant="grid" class="bottom-20 right-1/3 h-20 w-20 opacity-50" />
 
 	<div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
-		<div class="max-w-3xl">
-			<h1 class="text-4xl font-semibold tracking-tight text-brand-black sm:text-5xl">{title}</h1>
-			{subtitle && <p class="mt-4 max-w-2xl text-lg text-brand-black/70">{subtitle}</p>}
+		<div class="max-w-3xl" data-reveal-stagger>
+			<h1 class="text-4xl font-semibold tracking-tight text-brand-black sm:text-5xl" data-reveal data-reveal-immediate>{title}</h1>
+			{subtitle && <p class="mt-4 max-w-2xl text-lg text-brand-black/70" data-reveal data-reveal-immediate>{subtitle}</p>}
 		</div>
 	</div>
 

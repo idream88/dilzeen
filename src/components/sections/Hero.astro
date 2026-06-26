@@ -41,28 +41,29 @@ const accentImage = stockImages.modernKitchen;
 			>
 				<div
 					class="relative rounded-2xl border border-brand-taupe/40 bg-brand-cream/90 p-8 shadow-[0_8px_40px_-12px_rgba(44,36,32,0.12)] backdrop-blur-sm sm:rounded-3xl sm:p-10 lg:p-12"
+					data-reveal-stagger
 				>
 					<!-- Corner flourish -->
 					<div class="absolute left-6 top-6 h-8 w-8 border-l-2 border-t-2 border-brand-red/30" aria-hidden="true"></div>
 					<div class="absolute bottom-6 right-6 h-8 w-8 border-b-2 border-r-2 border-brand-red/30" aria-hidden="true"></div>
 
-					<p class="type-eyebrow !text-brand-charcoal/80">
+					<p class="type-eyebrow !text-brand-charcoal/80" data-reveal data-reveal-immediate>
 						Real Estate <span class="text-brand-red/60">•</span> Relocation <span class="text-brand-red/60">•</span> Home Harmony
 					</p>
-					<div class="accent-line mt-4"></div>
+					<div class="accent-line mt-4" data-reveal data-reveal-immediate></div>
 
-					<h1 class="type-hero mt-6">
+					<h1 class="type-hero mt-6" data-reveal data-reveal-immediate>
 						Find a Home That Feels Right, Inside and Out
 					</h1>
 
-					<p class="type-body mt-6 max-w-xl">
+					<p class="type-body mt-6 max-w-xl" data-reveal data-reveal-immediate>
 						I help buyers, sellers, and relocating families across Dallas-Fort Worth find homes with a
 						thoughtful Vastu and Feng Shui perspective.
 					</p>
 
-					<p class="type-caption mt-3">{site.affiliation}</p>
+					<p class="type-caption mt-3" data-reveal data-reveal-immediate>{site.affiliation}</p>
 
-					<div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+					<div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center" data-reveal data-reveal-immediate>
 						<Button href="/contact">Schedule a Consultation</Button>
 						<Button href="/vastu-feng-shui-home-search" variant="secondary">
 							Explore Vastu &amp; Feng Shui Search
@@ -72,10 +73,10 @@ const accentImage = stockImages.modernKitchen;
 			</div>
 
 			<!-- Right visual accent area -->
-			<div class="relative hidden lg:col-span-5 lg:block">
+			<div class="relative hidden lg:col-span-5 lg:block" data-reveal data-reveal-immediate>
 				<div class="relative ml-4 translate-y-6">
 					<div
-						class="relative aspect-[4/5] overflow-hidden rounded-2xl border border-brand-taupe/30 shadow-[0_20px_50px_-15px_rgba(44,36,32,0.15)]"
+						class="img-zoom relative aspect-[4/5] rounded-2xl border border-brand-taupe/30 shadow-[0_20px_50px_-15px_rgba(44,36,32,0.15)]"
 					>
 						<img
 							src={accentImage.src}

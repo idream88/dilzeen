@@ -27,27 +27,27 @@ const { content } = Astro.props;
 		{
 			content.portrait ? (
 				<div class="grid items-start gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-x-16">
-					<div class="order-2 lg:order-1 lg:col-span-7">
+					<div class="order-2 lg:order-1 lg:col-span-7" data-reveal>
 						<div class="prose prose-lg max-w-none text-brand-black/80">
 							{content.intro.map((paragraph) => (
 								<p class="type-body mb-5 last:mb-0">{paragraph}</p>
 							))}
 						</div>
 					</div>
-					<div class="order-1 lg:order-2 lg:col-span-5 lg:pt-2">
+					<div class="order-1 lg:order-2 lg:col-span-5 lg:pt-2" data-reveal>
 						<AboutPortrait {...content.portrait} />
 					</div>
 				</div>
 			) : content.introImage ? (
 				<div class="grid items-start gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-x-16">
-					<div class="order-2 lg:order-1 lg:col-span-7">
+					<div class="order-2 lg:order-1 lg:col-span-7" data-reveal>
 						<div class="prose prose-lg max-w-none text-brand-black/80">
 							{content.intro.map((paragraph) => (
 								<p class="type-body mb-5 last:mb-0">{paragraph}</p>
 							))}
 						</div>
 					</div>
-					<div class="order-1 lg:order-2 lg:col-span-5 lg:pt-2">
+					<div class="order-1 lg:order-2 lg:col-span-5 lg:pt-2" data-reveal>
 						<div class="relative">
 							<div
 								class="absolute -right-2 -top-2 h-full w-full rounded-2xl border border-brand-taupe/30"
@@ -58,7 +58,7 @@ const { content } = Astro.props;
 					</div>
 				</div>
 			) : (
-				<div class="prose prose-lg max-w-3xl text-brand-black/80">
+				<div class="prose prose-lg max-w-3xl text-brand-black/80" data-reveal>
 					{content.intro.map((paragraph) => (
 						<p class="mb-4">{paragraph}</p>
 					))}
@@ -78,9 +78,10 @@ const { content } = Astro.props;
 							: 'grid gap-6 sm:grid-cols-2',
 						content.supportingImages.length === 3 && 'lg:grid-cols-3',
 					]}
+					data-reveal-stagger
 				>
 					{content.supportingImages.map((image) => (
-						<div class="relative">
+						<div class="relative" data-reveal>
 							<div
 								class="absolute -right-2 -top-2 h-full w-full rounded-2xl border border-brand-taupe/30"
 								aria-hidden="true"
@@ -94,9 +95,9 @@ const { content } = Astro.props;
 
 		{
 			content.features.length > 0 && (
-				<div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				<div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
 					{content.features.map((feature) => (
-						<div class="rounded-lg border border-brand-black/10 bg-brand-warm p-6">
+						<div data-reveal class="card-lift rounded-lg border border-brand-black/10 bg-brand-warm p-6">
 							<h2 class="text-lg font-semibold text-brand-black">{feature.title}</h2>
 							<p class="mt-2 text-sm text-brand-black/70">{feature.description}</p>
 						</div>
@@ -108,7 +109,7 @@ const { content } = Astro.props;
 		{
 			content.accentSection && (
 				<div class="mt-16 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-					<div>
+					<div data-reveal>
 						<p class="type-eyebrow">{content.accentSection.eyebrow}</p>
 						<h2 class="mt-4 text-2xl font-semibold text-brand-black sm:text-3xl">
 							{content.accentSection.title}
@@ -116,7 +117,7 @@ const { content } = Astro.props;
 						<div class="accent-line mt-5"></div>
 						<p class="type-body mt-6 text-brand-black/80">{content.accentSection.description}</p>
 					</div>
-					<div class="relative">
+					<div class="relative" data-reveal>
 						<div
 							class="absolute -left-2 -bottom-2 h-full w-full rounded-2xl border border-brand-taupe/30"
 							aria-hidden="true"
@@ -129,11 +130,11 @@ const { content } = Astro.props;
 
 		{
 			content.steps && content.steps.length > 0 && (
-				<div class="mt-16">
+				<div class="mt-16" data-reveal>
 					<h2 class="text-2xl font-semibold text-brand-black">How It Works</h2>
-					<ol class="mt-8 grid gap-8 sm:grid-cols-3">
+					<ol class="mt-8 grid gap-8 sm:grid-cols-3" data-reveal-stagger>
 						{content.steps.map((step, i) => (
-							<li>
+							<li data-reveal>
 								<span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-red text-sm font-semibold text-brand-white">
 									{i + 1}
 								</span>

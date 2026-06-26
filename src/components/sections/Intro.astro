@@ -10,7 +10,7 @@ import { site } from '../../data/site';
 
 	<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-			<div class="lg:col-span-6 lg:order-2">
+			<div class="lg:col-span-6 lg:order-2" data-reveal>
 				<p class="type-eyebrow">Meet Your Realtor</p>
 				<h2 class="type-section-title mt-4">
 					Welcome. I'm {site.name.split(' ')[0]}
@@ -27,16 +27,16 @@ import { site } from '../../data/site';
 				</p>
 				<a
 					href="/about"
-					class="type-btn mt-8 inline-flex items-center gap-2 text-brand-red transition-colors hover:text-brand-red-dark"
+					class="link-arrow type-btn mt-8 inline-flex items-center gap-2 text-brand-red transition-colors hover:text-brand-red-dark"
 				>
 					Learn more about me
-					<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+					<svg class="link-arrow-icon h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 					</svg>
 				</a>
 			</div>
 
-			<div class="relative lg:col-span-6 lg:order-1">
+			<div class="relative lg:col-span-6 lg:order-1" data-reveal>
 				<!-- Layered image frame -->
 				<div class="relative mx-auto max-w-md lg:mx-0">
 					<div
@@ -44,7 +44,7 @@ import { site } from '../../data/site';
 						aria-hidden="true"
 					></div>
 					<div
-						class="relative aspect-[4/5] overflow-hidden rounded-2xl border border-brand-taupe/40 shadow-[0_16px_48px_-12px_rgba(44,36,32,0.12)]"
+						class="img-zoom relative aspect-[4/5] rounded-2xl border border-brand-taupe/40 shadow-[0_16px_48px_-12px_rgba(44,36,32,0.12)]"
 					>
 						<img
 							src="/images/dilzeen-headshot.png"

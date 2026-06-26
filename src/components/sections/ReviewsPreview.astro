@@ -20,12 +20,13 @@ const cardStyles = [
 			title="What Clients Say"
 			subtitle="Real experiences from buyers, sellers, and relocating families."
 		/>
-		<div class="mt-14 grid gap-8 md:grid-cols-3">
+		<div class="mt-14 grid gap-8 md:grid-cols-3" data-reveal-stagger>
 			{
 				testimonials.slice(0, 3).map((t, index) => (
 					<blockquote
+						data-reveal="fade"
 						class:list={[
-							'card-lift group relative rounded-2xl border border-brand-taupe/40 bg-brand-ivory/90 p-8 shadow-[0_4px_24px_-8px_rgba(44,36,32,0.07)]',
+							'card-lift group relative rounded-2xl border border-brand-taupe/40 bg-brand-ivory/90 p-8',
 							cardStyles[index],
 						]}
 					>
@@ -57,13 +58,13 @@ const cardStyles = [
 				))
 			}
 		</div>
-		<div class="mt-12 text-center">
+		<div class="mt-12 text-center" data-reveal>
 			<a
 				href="/reviews"
-				class="type-btn inline-flex items-center gap-2 text-brand-red transition-colors hover:text-brand-red-dark"
+				class="link-arrow type-btn inline-flex items-center gap-2 text-brand-red transition-colors hover:text-brand-red-dark"
 			>
 				Read more reviews
-				<svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+				<svg class="link-arrow-icon h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
 				</svg>
 			</a>

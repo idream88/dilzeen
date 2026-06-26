@@ -30,14 +30,14 @@ const heroImage = stockImages.luxuryGardenExterior;
 		<DecorativeMotif variant="grid" class="bottom-20 right-1/3 h-20 w-20 opacity-50" />
 
 		<div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
-			<div class="max-w-3xl">
-				<p class="type-eyebrow">{page.hero.eyebrow}</p>
-				<div class="accent-line mt-4"></div>
-				<h1 class="mt-6 text-4xl leading-[1.15] sm:text-5xl lg:text-[3.25rem]">
+			<div class="max-w-3xl" data-reveal-stagger>
+				<p class="type-eyebrow" data-reveal data-reveal-immediate>{page.hero.eyebrow}</p>
+				<div class="accent-line mt-4" data-reveal data-reveal-immediate></div>
+				<h1 class="mt-6 text-4xl leading-[1.15] sm:text-5xl lg:text-[3.25rem]" data-reveal data-reveal-immediate>
 					{page.hero.title}
 				</h1>
-				<p class="mt-4 max-w-2xl text-lg text-brand-charcoal/70">{page.hero.subtitle}</p>
-				<div class="mt-8 space-y-5 text-lg leading-relaxed text-brand-charcoal/75">
+				<p class="mt-4 max-w-2xl text-lg text-brand-charcoal/70" data-reveal data-reveal-immediate>{page.hero.subtitle}</p>
+				<div class="mt-8 space-y-5 text-lg leading-relaxed text-brand-charcoal/75" data-reveal data-reveal-immediate>
 					{page.hero.intro.map((paragraph) => <p>{paragraph}</p>)}
 				</div>
 			</div>
@@ -55,7 +55,7 @@ const heroImage = stockImages.luxuryGardenExterior;
 		<DecorativeMotif variant="circles" class="right-8 top-12 h-32 w-32 opacity-30" />
 
 		<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-			<div class="mx-auto max-w-3xl text-center">
+			<div class="mx-auto max-w-3xl text-center" data-reveal>
 				<h2 class="sr-only">Past closing gallery</h2>
 				<p class="text-balance text-lg leading-relaxed text-brand-charcoal/75">
 					{page.galleryIntro}
@@ -78,7 +78,7 @@ const heroImage = stockImages.luxuryGardenExterior;
 		></div>
 		<DecorativeMotif variant="circles" class="left-1/4 top-1/2 h-48 w-48 -translate-y-1/2 text-brand-white/10" />
 
-		<div class="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+		<div class="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8" data-reveal>
 			<div class="accent-line-center mb-6 !via-brand-white/40"></div>
 			<h2 class="type-section-title text-brand-cream">{page.cta.title}</h2>
 			<p class="type-body mx-auto mt-5 max-w-xl !text-brand-cream/90">{page.cta.body}</p>
