@@ -37,6 +37,11 @@ export const stockImages = {
 		alt: 'A luxurious modern home interior featuring a glass-railed staircase, a plush cream sofa, gray velvet armchairs, and elegant gold accents in a bright open-concept living room',
 		objectPosition: 'center center',
 	},
+	vastuHighlightInterior: {
+		src: `${stock}/luxury-living-room-with-fireplace-and-natural-light.jpg`,
+		alt: 'A bright luxury living room with a stone fireplace wall, coffered wood ceiling, halo chandelier, and floor-to-ceiling windows filling the space with natural light',
+		objectPosition: 'center center',
+	},
 	spaBathroom: {
 		src: `${stock}/bathtub-in-a-bright-stylish-bathroom-setting.jpg`,
 		alt: 'A serene spa-like bathroom and lounge with a freestanding soaking tub, warm natural light, and neutral tones',
@@ -50,6 +55,11 @@ export const stockImages = {
 	modernKitchen: {
 		src: `${stock}/modern-kitchen-interior-with-island-and-natural-light.jpg`,
 		alt: 'A warm, sun-drenched modern kitchen with a large island and pendant lighting, creating an inviting premium home atmosphere',
+		objectPosition: 'center center',
+	},
+	vastuIntroKitchen: {
+		src: `${stock}/bright-modern-kitchen-with-island-and-barstools.jpg`,
+		alt: 'A bright modern kitchen with a large white island, beige cabinetry, barstools, and stainless steel appliances in an open, airy layout',
 		objectPosition: 'center center',
 	},
 	luxuryRentalHome: {

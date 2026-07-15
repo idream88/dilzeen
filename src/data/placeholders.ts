@@ -51,7 +51,7 @@ export const pages: Record<string, PageContent> = {
 		description:
 			'Learn about Dilzeen Engineer, a DFW realtor with Keller Williams Southlake, offering relocation support, investor guidance, and Vastu & Feng Shui home search.',
 		heroImage: stockImages.elegantDining,
-		supportingImages: [stockImages.stylishInterior],
+		supportingImages: [stockImages.vastuIntroKitchen],
 		portrait: {
 			src: '/images/dilzeen-engineer-about.png',
 			alt: 'Dilzeen Engineer, DFW realtor, seated and smiling warmly',
