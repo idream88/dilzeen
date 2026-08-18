@@ -45,6 +45,7 @@ export function formatClosingCaption(slug: string): string {
 		'grapevine',
 		'colleyville',
 		'keller',
+		'watauga',
 	];
 
 	let cityStart = parts.length;
@@ -102,6 +103,13 @@ export const closingsPage = {
 };
 
 export const closingPhotos: ClosingPhoto[] = [
+	closingPhoto('1406-haddington-ln-keller'),
+	closingPhoto('2820-brushy-lake-dr-fort-worth'),
+	closingPhoto('3120-forchini-fort-worth'),
+	closingPhoto('849-riverside-dr-grapevine', 'Successfully rented home at'),
+	closingPhoto('9112-suttonridge-dr-fort-worth', 'Successfully rented home at'),
+	closingPhoto('10445-merced-lake-fort-worth', 'Successfully rented home at'),
+	closingPhoto('6028-bursey-rd-watauga', 'Successfully rented home at'),
 	closingPhoto('820-deer-hollow-southlake'),
 	closingPhoto('121-corinna-ct-hurst'),
 	closingPhoto('219-canyon-lake-dr-southlake'),
