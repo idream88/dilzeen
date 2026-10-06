@@ -28,8 +28,6 @@ export const site = {
 	},
 	hours: 'Monday – Friday, 9:00 AM – 6:00 PM',
 	license: 'Texas Real Estate License #0828341',
-	// Replace with your Formspree form ID: https://formspree.io
-	formspreeEndpoint: 'https://formspree.io/f/PLACEHOLDER',
 	areaServed: ['Southlake', 'Grapevine', 'Colleyville', 'Keller', 'DFW Metroplex'],
 	social: {
 		facebook: '',

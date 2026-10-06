@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import { formatTitle, site } from '../data/site';
+
+const phoneHref = `tel:${site.phone.replace(/\D/g, '')}`;
+---
+
+<BaseLayout
+	title={formatTitle('Message Sent')}
+	description="Your message to Dilzeen Engineer was sent. Dilzeen will follow up with you."
+	noindex
+>
+	<section class="bg-brand-warm py-20 sm:py-28">
+		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<p class="type-eyebrow">Contact</p>
+			<h1 class="mt-4 text-4xl font-semibold tracking-tight text-brand-black sm:text-5xl">Message sent</h1>
+			<p class="mt-4 max-w-2xl text-lg text-brand-black/70">
+				Your message was sent. Dilzeen will follow up with you.
+			</p>
+			<div class="mt-8 flex flex-col gap-4 sm:flex-row">
+				<Button href="/">Back to Home</Button>
+				<Button href={phoneHref} variant="secondary">Call {site.phone}</Button>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
