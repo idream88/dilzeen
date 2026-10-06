@@ -18,64 +18,6 @@
   status = 301
   force = true
 
-# Canonical pages use a trailing slash. These rules match only those page paths,
-# so files such as images, the sitemap, and robots.txt are left alone.
-[[redirects]]
-  from = "/about"
-  to = "/about/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/builders"
-  to = "/builders/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/buyers-investors"
-  to = "/buyers-investors/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/closings"
-  to = "/closings/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/contact"
-  to = "/contact/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/leasing-rentals"
-  to = "/leasing-rentals/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/relocation-services"
-  to = "/relocation-services/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/reviews"
-  to = "/reviews/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/sellers"
-  to = "/sellers/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/vastu-feng-shui-home-search"
-  to = "/vastu-feng-shui-home-search/"
-  status = 301
-  force = true
+# Do not add /page -> /page/ redirects here. Netlify matches those paths with or
+# without a trailing slash, so a forced slash redirect loops on itself.
+# Canonical tags still use the trailing-slash URL.
