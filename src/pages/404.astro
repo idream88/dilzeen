@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import { formatTitle } from '../data/site';
+---
+
+<BaseLayout
+	title={formatTitle('Page Not Found')}
+	description="The page you requested is not available. Return to Dilzeen Engineer's homepage or get in touch."
+	noindex
+>
+	<section class="bg-brand-warm py-20 sm:py-28">
+		<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+			<p class="type-eyebrow">404</p>
+			<h1 class="mt-4 text-4xl font-semibold tracking-tight text-brand-black sm:text-5xl">Page not found</h1>
+			<p class="mt-4 max-w-2xl text-lg text-brand-black/70">
+				That page is not available. You can return home, or reach Dilzeen by phone or email from the contact page.
+			</p>
+			<div class="mt-8 flex flex-col gap-4 sm:flex-row">
+				<Button href="/">Back to Home</Button>
+				<Button href="/contact/" variant="secondary">Contact</Button>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

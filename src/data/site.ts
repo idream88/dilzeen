@@ -15,7 +15,7 @@ export const site = {
 	affiliation: 'Keller Williams Southlake',
 	defaultDescription:
 		'Dilzeen Engineer is a DFW realtor with Keller Williams Southlake, helping buyers, sellers, and relocating families with relocation support, investments, and Vastu & Feng Shui home search across Dallas-Fort Worth.',
-	url: 'https://www.example.com',
+	url: 'https://dilzeen.com',
 	locale: 'en_US',
 	phone: '(949) 813-4699',
 	email: 'DilzeenEngineer@KW.com',

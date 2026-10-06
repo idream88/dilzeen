@@ -1,0 +1,81 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Send www to the apex host. Netlify already upgrades http://dilzeen.com to HTTPS.
+[[redirects]]
+  from = "https://www.dilzeen.com/*"
+  to = "https://dilzeen.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.dilzeen.com/*"
+  to = "https://dilzeen.com/:splat"
+  status = 301
+  force = true
+
+# Canonical pages use a trailing slash. These rules match only those page paths,
+# so files such as images, the sitemap, and robots.txt are left alone.
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/builders"
+  to = "/builders/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/buyers-investors"
+  to = "/buyers-investors/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/closings"
+  to = "/closings/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/leasing-rentals"
+  to = "/leasing-rentals/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/relocation-services"
+  to = "/relocation-services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/reviews"
+  to = "/reviews/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sellers"
+  to = "/sellers/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vastu-feng-shui-home-search"
+  to = "/vastu-feng-shui-home-search/"
+  status = 301
+  force = true

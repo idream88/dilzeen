@@ -97,7 +97,7 @@ export const closingsPage = {
 		body: 'Whether you\'re preparing to buy, sell, relocate, or invest, I\'m ready to help you move forward with confidence.',
 		button: {
 			text: 'Start Your Home Journey',
-			href: '/contact',
+			href: '/contact/',
 		},
 	},
 };

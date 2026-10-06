@@ -11,11 +11,11 @@ export const vastuPage = {
 			'For many buyers, a home is more than square footage, finishes, and school ratings. It is the place where your family rests, grows, gathers, and builds the next chapter of life. I combine real estate guidance with Vastu and Feng Shui knowledge to help you evaluate homes with clarity, confidence, and intention.',
 		primaryCta: {
 			text: 'Start Your Home Search',
-			href: '/contact',
+			href: '/contact/',
 		},
 		secondaryCta: {
 			text: 'Ask About Vastu & Feng Shui Guidance',
-			href: '/contact',
+			href: '/contact/',
 		},
 		image: {
 			src: '/images/stock/stylish-home-interior-with-modern-decor-and-stairs.jpg',
@@ -154,7 +154,7 @@ export const vastuPage = {
 		],
 		cta: {
 			text: 'Explore Builder & Floor Plan Consulting',
-			href: '/builders',
+			href: '/builders/',
 		},
 	},
 	personalized: {
@@ -240,11 +240,11 @@ export const vastuPage = {
 		body: 'Whether you want a practical home search with a light Vastu and Feng Shui review or a deeper evaluation, I can help you move forward with clarity.',
 		primaryCta: {
 			text: 'Schedule a Consultation',
-			href: '/contact',
+			href: '/contact/',
 		},
 		secondaryCta: {
 			text: 'Start Your Home Search',
-			href: '/contact',
+			href: '/contact/',
 		},
 	},
 } as const;

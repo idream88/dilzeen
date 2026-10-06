@@ -15,15 +15,27 @@ const sizeClasses = {
 	card: 'w-[125px] h-auto object-contain',
 };
 
-const logoAsset = site.logo.light;
+const logoAsset =
+	variant === 'footer'
+		? {
+				src: '/images/dilzeen-butterfly-name-transparent.png',
+				width: 851,
+				height: 668,
+			}
+		: {
+				src: site.logo.light.src,
+				src2x: site.logo.light.src2x,
+				width: 1024,
+				height: 793,
+			};
 ---
 
 <img
 	src={logoAsset.src}
-	srcset={`${logoAsset.src} 1x, ${logoAsset.src2x} 2x`}
+	srcset={'src2x' in logoAsset ? `${logoAsset.src} 1x, ${logoAsset.src2x} 2x` : undefined}
 	alt={site.logo.alt}
-	width={1024}
-	height={793}
+	width={logoAsset.width}
+	height={logoAsset.height}
 	class:list={[sizeClasses[variant], className]}
 	loading={variant === 'header' || variant === 'mobile' ? 'eager' : 'lazy'}
 	decoding="async"

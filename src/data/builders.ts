@@ -11,11 +11,11 @@ export const buildersPage = {
 			'Help your clients feel the difference the moment they walk in. I work with builders to review floor plans, room placement, entry flow, and directional layout using Feng Shui and Vastu principles before construction begins.',
 		primaryCta: {
 			text: 'Schedule a Builder Consultation',
-			href: '/contact',
+			href: '/contact/',
 		},
 		secondaryCta: {
 			text: 'Review My Floor Plan',
-			href: '/contact',
+			href: '/contact/',
 		},
 	},
 	intro: {
@@ -129,10 +129,10 @@ export const buildersPage = {
 		body: 'Before the foundation is poured, make sure the plan supports the life your clients want to build inside the home. Work with me for Feng Shui and Vastu floor plan consulting designed specifically for builders.',
 		button: {
 			text: 'Schedule a Builder Consultation',
-			href: '/contact',
+			href: '/contact/',
 		},
 		secondaryText: 'Have a floor plan ready? Send it for review.',
-		secondaryHref: '/contact',
+		secondaryHref: '/contact/',
 	},
 	faq: {
 		h2: 'Frequently Asked Questions',

@@ -389,31 +389,31 @@ export const services = [
 	{
 		title: 'Relocation Services',
 		description: 'Thoughtful support for moves to the Dallas-Fort Worth metroplex.',
-		href: '/relocation-services',
+		href: '/relocation-services/',
 	},
 	{
 		title: 'Buyers & Investors',
 		description: 'Clear guidance for first-time buyers and seasoned investors.',
-		href: '/buyers-investors',
+		href: '/buyers-investors/',
 	},
 	{
 		title: 'Sellers',
 		description: 'Strategic pricing, marketing, and negotiation.',
-		href: '/sellers',
+		href: '/sellers/',
 	},
 	{
 		title: 'Leasing / Rentals',
 		description: 'Tenant and landlord representation.',
-		href: '/leasing-rentals',
+		href: '/leasing-rentals/',
 	},
 	{
 		title: 'Builders',
 		description: 'Feng Shui & Vastu floor plan consulting for builders.',
-		href: '/builders',
+		href: '/builders/',
 	},
 	{
 		title: 'Past Closings',
 		description: 'Homes successfully closed across DFW.',
-		href: '/closings',
+		href: '/closings/',
 	},
 ];

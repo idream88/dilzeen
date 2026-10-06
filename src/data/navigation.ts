@@ -11,23 +11,23 @@ export interface NavItem {
 
 export const nav: NavItem[] = [
 	{ label: 'Home', href: '/' },
-	{ label: 'About', href: '/about' },
+	{ label: 'About', href: '/about/' },
 	{
 		label: 'Services',
 		children: [
-			{ label: 'Relocation Services', href: '/relocation-services' },
-			{ label: 'Buyers & Investors', href: '/buyers-investors' },
-			{ label: 'Sellers', href: '/sellers' },
-			{ label: 'Leasing / Rentals', href: '/leasing-rentals' },
-			{ label: 'Builders', href: '/builders' },
-			{ label: 'Past Closings', href: '/closings' },
+			{ label: 'Relocation Services', href: '/relocation-services/' },
+			{ label: 'Buyers & Investors', href: '/buyers-investors/' },
+			{ label: 'Sellers', href: '/sellers/' },
+			{ label: 'Leasing / Rentals', href: '/leasing-rentals/' },
+			{ label: 'Builders', href: '/builders/' },
+			{ label: 'Past Closings', href: '/closings/' },
 		],
 	},
-	{ label: 'Vastu & Feng Shui', href: '/vastu-feng-shui-home-search' },
-	{ label: 'Reviews', href: '/reviews' },
+	{ label: 'Vastu & Feng Shui', href: '/vastu-feng-shui-home-search/' },
+	{ label: 'Reviews', href: '/reviews/' },
 ];
 
-export const contactHref = '/contact';
+export const contactHref = '/contact/';
 
 export function flattenNavLinks(): NavLink[] {
 	const links: NavLink[] = [];
@@ -46,9 +46,16 @@ export function flattenNavLinks(): NavLink[] {
 	return links;
 }
 
+function normalizePath(path: string): string {
+	if (path.length > 1 && path.endsWith('/')) return path.slice(0, -1);
+	return path;
+}
+
 export function isActive(pathname: string, href: string): boolean {
-	if (href === '/') return pathname === '/';
-	return pathname === href || pathname.startsWith(`${href}/`);
+	const current = normalizePath(pathname);
+	const target = normalizePath(href);
+	if (target === '/') return current === '/';
+	return current === target || current.startsWith(`${target}/`);
 }
 
 export function isNavItemActive(pathname: string, item: NavItem): boolean {
