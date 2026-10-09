@@ -18,7 +18,7 @@ Assembly for this client: start from Professional, remove disabled `<!-- MODULE:
 
 - **Layout ID:** `professional`
 - **Related brand profile path / name:** None in this repository. Brand values below are taken from the Dilzeen project (`src/data/site.ts`, `src/styles/global.css`) and from explicitly approved client decisions.
-- **Notes for generator / designer:** First Dilzeen implementation. Logo is the visual anchor. Company line is Keller Williams Southlake, so the separate `brokerage-affiliate` module is off. Website `https://dilzeen.com` is the approved production domain; the site was not live there when this profile was filled.
+- **Notes for generator / designer:** First Dilzeen implementation. Logo is the visual anchor. Company line is Keller Williams Southlake, so the separate `brokerage-affiliate` module is off. Website `https://dilzeen.com` is the production domain and is live.
 
 ---
 
@@ -153,13 +153,20 @@ The legal line is verified project copy (`src/data/site.ts` affiliation and lice
 
 ---
 
-## 4. Production dependencies / unresolved QA
+## 4. QA status
 
-These items block treating this signature as production-complete. They are not missing placeholders inside `dilzeen-professional.html`.
+This signature is **not fully production-complete**. Real-send email-client QA is still pending.
 
-1. **Logo URL is pending live hosting.** The HTML uses `https://dilzeen.com/images/email/dilzeen-signature-logo.png`. Dilzeen.com was not live when this was generated. After deployment, confirm that URL returns the PNG publicly over HTTPS.
-2. **Website URL is the approved future domain.** Confirm `https://dilzeen.com` resolves to this site before production mailbox install.
-3. **Reviews URL depends on the live site.** Confirm `https://dilzeen.com/reviews` is publicly available after deployment.
-4. **Real-send compatibility QA is not complete.** The Agency Email Signature System is `1.0.0-rc.2`. This client HTML has not been verified by real sends in Gmail, Outlook, Apple Mail, iOS Mail, or Android Mail.
-5. **Keller Williams / TREC required disclaimer text was not provided.** This version uses only the verified license / EHO line. Do not treat that line as a substitute for brokerage-required legal copy if KW later supplies it.
-6. **Social, CTA, address, certifications, and headshot** remain off until those URLs or assets are explicitly approved.
+| Check | Status |
+|-------|--------|
+| Production site deployed | PASSED |
+| Production logo URL reachable (`https://dilzeen.com/images/email/dilzeen-signature-logo.png`) | PASSED |
+| Website URL reachable (`https://dilzeen.com`) | PASSED |
+| Reviews URL reachable (`https://dilzeen.com/reviews`) | PASSED |
+| Browser visual QA | PASSED |
+| Real-send email-client QA (Gmail, Outlook, Apple Mail, iOS Mail, Android Mail) | STILL PENDING |
+
+Remaining notes (do not block URL readiness):
+
+- **Keller Williams / TREC required disclaimer text was not provided.** This version uses only the verified license / EHO line. Do not treat that line as a substitute for brokerage-required legal copy if KW later supplies it.
+- **Social, CTA, address, certifications, and headshot** remain off until those URLs or assets are explicitly approved.
