@@ -19,6 +19,7 @@ Assembly for this client: start from Professional, remove disabled `<!-- MODULE:
 - **Layout ID:** `professional`
 - **Related brand profile path / name:** None in this repository. Brand values below are taken from the Dilzeen project (`src/data/site.ts`, `src/styles/global.css`) and from explicitly approved client decisions.
 - **Notes for generator / designer:** First Dilzeen implementation. Logo is the visual anchor. Company line is Keller Williams Southlake, so the separate `brokerage-affiliate` module is off. Website `https://dilzeen.com` is the production domain and is live.
+- **Signature maximum width:** `640px` on desktop; `width:100%` allows the same table to contract in narrower email panes.
 
 ---
 
