@@ -19,6 +19,7 @@ Assembly for this client: start from Professional, remove disabled `<!-- MODULE:
 - **Layout ID:** `professional`
 - **Related brand profile path / name:** None in this repository. Brand values below are taken from the Dilzeen project (`src/data/site.ts`, `src/styles/global.css`) and from explicitly approved client decisions.
 - **Notes for generator / designer:** First Dilzeen implementation. Logo is the visual anchor. Company line is Keller Williams Southlake, so the separate `brokerage-affiliate` module is off. Website `https://dilzeen.com` is the production domain and is live.
+- **Signature maximum width:** `640px` on desktop; `width:100%` allows the same table to contract in narrower email panes.
 
 ---
 
@@ -51,12 +52,12 @@ Site webfonts (Cormorant Garamond, Source Sans 3) are not used. Email clients do
 
 ### Logos
 
-- **Source asset (do not overwrite):** `public/images/dilzeen-butterfly-name-transparent.png`
-- **Email-optimized asset:** `public/images/email/dilzeen-signature-logo.png`
-- **Logo image URL:** `https://dilzeen.com/images/email/dilzeen-signature-logo.png`
+- **Client master asset:** `public/images/email/dilzeen-full-logo-transparent.png`
+- **Production signature asset:** `public/images/email/dilzeen-full-logo-transparent.png`
+- **Logo image URL:** `https://dilzeen.com/images/email/dilzeen-full-logo-transparent.png`
 - **Logo width (px):** `120`
 - **Logo alt text:** Dilzeen Engineer logo
-- **Export notes:** Trimmed transparent padding, resized to 240×185 (2× the 120px display width) as PNG with alpha preserved. Original framed lockup was not used.
+- **Export notes:** The production asset is a byte-for-byte copy of the client-supplied 2200×1704 RGBA master. It is not cropped or resized, so the butterfly artwork remains intact. The previous 240×185 email export (`public/images/email/dilzeen-signature-logo.png`) and the alternate butterfly-name asset were incorrect for this signature.
 
 ### Contact (company defaults)
 
@@ -119,7 +120,7 @@ The legal line is verified project copy (`src/data/site.ts` affiliation and lice
 ## 2. Person-specific data
 
 - **Full name:** Dilzeen Engineer
-- **Title / role:** Home Realtor
+- **Title / role:** Realtor and Feng Shui Master
 - **Direct phone:** (949) 813-4699
 - **Mobile phone (optional):** Not provided as a separate number
 - **Email:** DilzeenEngineer@KW.com
@@ -151,6 +152,8 @@ The legal line is verified project copy (`src/data/site.ts` affiliation and lice
 | `legal-disclaimer` | on | Verified license / EHO line only |
 | `brokerage-affiliate` | off | Company line already identifies the brokerage |
 
+**Contact presentation:** phone and email share the first wrapping line; website and reviews share the second. A middle dot separates links on desktop, while the inline text can wrap naturally in narrow email panes.
+
 ---
 
 ## 4. QA status
@@ -160,7 +163,7 @@ This signature is **not fully production-complete**. Real-send email-client QA i
 | Check | Status |
 |-------|--------|
 | Production site deployed | PASSED |
-| Production logo URL reachable (`https://dilzeen.com/images/email/dilzeen-signature-logo.png`) | PASSED |
+| Production logo URL reachable (`https://dilzeen.com/images/email/dilzeen-full-logo-transparent.png`) | PENDING DEPLOY |
 | Website URL reachable (`https://dilzeen.com`) | PASSED |
 | Reviews URL reachable (`https://dilzeen.com/reviews`) | PASSED |
 | Browser visual QA | PASSED |
