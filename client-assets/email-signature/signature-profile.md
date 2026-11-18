@@ -52,11 +52,11 @@ Site webfonts (Cormorant Garamond, Source Sans 3) are not used. Email clients do
 ### Logos
 
 - **Source asset (do not overwrite):** `public/images/dilzeen-butterfly-name-transparent.png`
-- **Email-optimized asset:** `public/images/email/dilzeen-signature-logo.png`
-- **Logo image URL:** `https://dilzeen.com/images/email/dilzeen-signature-logo.png`
+- **Production signature asset:** `public/images/dilzeen-butterfly-name-transparent.png`
+- **Logo image URL:** `https://dilzeen.com/images/dilzeen-butterfly-name-transparent.png`
 - **Logo width (px):** `120`
 - **Logo alt text:** Dilzeen Engineer logo
-- **Export notes:** Trimmed transparent padding, resized to 240×185 (2× the 120px display width) as PNG with alpha preserved. Original framed lockup was not used.
+- **Export notes:** Use the original transparent PNG so the butterfly retains safe padding on every edge. The previous 240×185 email export (`public/images/email/dilzeen-signature-logo.png`) was trimmed too tightly and clipped visible artwork.
 
 ### Contact (company defaults)
 
@@ -119,7 +119,7 @@ The legal line is verified project copy (`src/data/site.ts` affiliation and lice
 ## 2. Person-specific data
 
 - **Full name:** Dilzeen Engineer
-- **Title / role:** Home Realtor
+- **Title / role:** Realtor and Feng Shui Master
 - **Direct phone:** (949) 813-4699
 - **Mobile phone (optional):** Not provided as a separate number
 - **Email:** DilzeenEngineer@KW.com
@@ -160,7 +160,7 @@ This signature is **not fully production-complete**. Real-send email-client QA i
 | Check | Status |
 |-------|--------|
 | Production site deployed | PASSED |
-| Production logo URL reachable (`https://dilzeen.com/images/email/dilzeen-signature-logo.png`) | PASSED |
+| Production logo URL reachable (`https://dilzeen.com/images/dilzeen-butterfly-name-transparent.png`) | PASSED |
 | Website URL reachable (`https://dilzeen.com`) | PASSED |
 | Reviews URL reachable (`https://dilzeen.com/reviews`) | PASSED |
 | Browser visual QA | PASSED |
