@@ -51,12 +51,12 @@ Site webfonts (Cormorant Garamond, Source Sans 3) are not used. Email clients do
 
 ### Logos
 
-- **Source asset (do not overwrite):** `public/images/dilzeen-butterfly-name-transparent.png`
-- **Production signature asset:** `public/images/dilzeen-butterfly-name-transparent.png`
-- **Logo image URL:** `https://dilzeen.com/images/dilzeen-butterfly-name-transparent.png`
+- **Client master asset:** `public/images/email/dilzeen-full-logo-transparent.png`
+- **Production signature asset:** `public/images/email/dilzeen-full-logo-transparent.png`
+- **Logo image URL:** `https://dilzeen.com/images/email/dilzeen-full-logo-transparent.png`
 - **Logo width (px):** `120`
 - **Logo alt text:** Dilzeen Engineer logo
-- **Export notes:** Use the original transparent PNG so the butterfly retains safe padding on every edge. The previous 240×185 email export (`public/images/email/dilzeen-signature-logo.png`) was trimmed too tightly and clipped visible artwork.
+- **Export notes:** The production asset is a byte-for-byte copy of the client-supplied 2200×1704 RGBA master. It is not cropped or resized, so the butterfly artwork remains intact. The previous 240×185 email export (`public/images/email/dilzeen-signature-logo.png`) and the alternate butterfly-name asset were incorrect for this signature.
 
 ### Contact (company defaults)
 
@@ -160,7 +160,7 @@ This signature is **not fully production-complete**. Real-send email-client QA i
 | Check | Status |
 |-------|--------|
 | Production site deployed | PASSED |
-| Production logo URL reachable (`https://dilzeen.com/images/dilzeen-butterfly-name-transparent.png`) | PASSED |
+| Production logo URL reachable (`https://dilzeen.com/images/email/dilzeen-full-logo-transparent.png`) | PENDING DEPLOY |
 | Website URL reachable (`https://dilzeen.com`) | PASSED |
 | Reviews URL reachable (`https://dilzeen.com/reviews`) | PASSED |
 | Browser visual QA | PASSED |
