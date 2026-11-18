@@ -152,6 +152,8 @@ The legal line is verified project copy (`src/data/site.ts` affiliation and lice
 | `legal-disclaimer` | on | Verified license / EHO line only |
 | `brokerage-affiliate` | off | Company line already identifies the brokerage |
 
+**Contact presentation:** phone and email share the first wrapping line; website and reviews share the second. A middle dot separates links on desktop, while the inline text can wrap naturally in narrow email panes.
+
 ---
 
 ## 4. QA status
